@@ -1,1 +1,6 @@
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GUI.csproj.GenerateResource.Cache

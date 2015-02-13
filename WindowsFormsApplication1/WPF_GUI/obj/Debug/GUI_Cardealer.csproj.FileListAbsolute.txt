@@ -1,0 +1,13 @@
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.exe.config
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.exe
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.pdb
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\GUI_Cardealer.csprojResolveAssemblyReference.cache
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\MainWindow.baml
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\MainWindow.g.cs
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\App.g.cs
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI_MarkupCompile.cache
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.g.resources
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.Properties.Resources.resources
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\GUI_Cardealer.csproj.GenerateResource.Cache
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.exe
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.pdb
