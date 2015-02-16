@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\
 WPF_GUI
 none
 false
 DEBUG;TRACE
-C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\WPF_GUI\App.xaml
-11151548125
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\App.xaml
+31010487643
 
-5-2017746502
+7-2076258676
 12-1401562060
-MainWindow.xaml;
+MainMenu.xaml;Login.xaml;RegisterCustomer.xaml;
 
 False
 

@@ -9,6 +9,9 @@ namespace Domain
 {
     public class Leasing:Contract
     {
-        
+        public Leasing(Customer customer) : base (customer)
+        {
+
+        }
     }
 }

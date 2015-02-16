@@ -1,2 +1,7 @@
 c:\users\anders bruun rosbæk\documents\visual studio 2012\Projects\WindowsFormsApplication1\ClassLibrary1\obj\Debug\Domain.csprojResolveAssemblyReference.cache
 C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

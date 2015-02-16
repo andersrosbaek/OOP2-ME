@@ -1,0 +1,21 @@
+﻿<Window x:Class="WPF_GUI.MainScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainScreen" Height="225" Width="601">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="198*"/>
+            <ColumnDefinition Width="198*"/>
+            <ColumnDefinition Width="197*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Log out" HorizontalAlignment="Left" Margin="112,163,0,0" VerticalAlignment="Top" Width="75" Grid.Column="2" Height="22" Click="Button_Click_1"/>
+        <Button Content="Customer registry" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="120" Height="25" Click="Button_Click"/>
+        <Button Content="Car registry" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="120" Height="25" Grid.Column="1"/>
+        <Label Content="Cars" HorizontalAlignment="Left" Margin="40,9,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Label Content="Customers" HorizontalAlignment="Left" Margin="40,9,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Contracts" HorizontalAlignment="Left" Margin="40,9,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+        <Button Content="Register a car" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Width="120" Height="25" Grid.Column="1"/>
+        <Button Content="Register a customer" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
+
+    </Grid>
+</Window>

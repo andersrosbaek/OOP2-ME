@@ -10,31 +10,30 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WPF_GUI
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainScreen.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainScreen : Window
     {
-        public MainWindow()
+        public MainScreen()
         {
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            RegisterCustomer regCust = new RegisterCustomer();
+            regCust.Show();
+            
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

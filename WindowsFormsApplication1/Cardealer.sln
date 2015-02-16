@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "ClassLibrary1\Domain.csproj", "{412E05C2-ED00-4BD0-951F-906B0421CCAE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F4040E9B-3DE1-46E3-8EFE-9E8104C00C17} = {F4040E9B-3DE1-46E3-8EFE-9E8104C00C17}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_Cardealer", "WPF_GUI\GUI_Cardealer.csproj", "{DE6D142C-F401-4618-88C0-E9FD9AAFDA6F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{412E05C2-ED00-4BD0-951F-906B0421CCAE} = {412E05C2-ED00-4BD0-951F-906B0421CCAE}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistent", "ClassLibrary2\Persistent.csproj", "{F4040E9B-3DE1-46E3-8EFE-9E8104C00C17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,10 @@ Global
 		{DE6D142C-F401-4618-88C0-E9FD9AAFDA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE6D142C-F401-4618-88C0-E9FD9AAFDA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE6D142C-F401-4618-88C0-E9FD9AAFDA6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4040E9B-3DE1-46E3-8EFE-9E8104C00C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4040E9B-3DE1-46E3-8EFE-9E8104C00C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4040E9B-3DE1-46E3-8EFE-9E8104C00C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4040E9B-3DE1-46E3-8EFE-9E8104C00C17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

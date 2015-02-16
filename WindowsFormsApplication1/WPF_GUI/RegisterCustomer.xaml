@@ -1,0 +1,39 @@
+﻿<Window x:Class="WPF_GUI.RegisterCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="357" Width="313">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="39*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Create customer" HorizontalAlignment="Left" Margin="40,295,0,0" VerticalAlignment="Top" Width="110" Height="22" Grid.Column="1"/>
+        <RadioButton Content="Private" HorizontalAlignment="Left" Margin="28,20,0,0" VerticalAlignment="Top" GroupName="Type" RenderTransformOrigin="-0.154,0.5" Grid.Column="1" Height="16" Width="52" Checked="RadioButton_Checked"/>
+        <RadioButton Content="Business" HorizontalAlignment="Left" Margin="106,20,0,0" VerticalAlignment="Top" GroupName="Type" Grid.Column="1" Height="16" Width="61" Checked="RadioButton_Checked_1"/>
+        <Label Content="Customer type:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+
+
+
+        <Grid x:Name="PrivateGrid" HorizontalAlignment="Left" Height="278" Margin="0,49,0,0" VerticalAlignment="Top" Width="305" Grid.ColumnSpan="2" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="22*"/>
+                <ColumnDefinition Width="39*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Address:" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Phone number:" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Age:" HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Sex:" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <RadioButton Content="Male" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="28,141,0,0" GroupName="Sex"/>
+            <RadioButton Content="Female" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="106,141,0,0" GroupName="Sex"/>
+            <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="28,107,0,0" VerticalAlignment="Top" Width="139"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="28,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
+            <TextBox x:Name="Number" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="28,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" TextChanged="TextBox_TextChanged"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="28,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
+
+        </Grid>
+
+    </Grid>
+
+
+</Window>
