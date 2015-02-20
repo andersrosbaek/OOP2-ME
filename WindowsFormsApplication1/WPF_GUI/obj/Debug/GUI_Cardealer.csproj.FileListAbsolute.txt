@@ -28,3 +28,24 @@ C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\De
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\RegisterCustomer.baml
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\MainMenu.g.cs
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\RegisterCustomer.g.cs
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.exe.config
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.exe
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.pdb
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.exe
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.pdb
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\GUI_Cardealer.csprojResolveAssemblyReference.cache
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\MainMenu.baml
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\Login.baml
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\RegisterCustomer.baml
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\RegisterVehicle.baml
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\MainMenu.g.cs
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\Login.g.cs
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\RegisterCustomer.g.cs
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\RegisterVehicle.g.cs
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\App.g.cs
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI_MarkupCompile.cache
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.g.resources
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.Properties.Resources.resources
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\GUI_Cardealer.csproj.GenerateResource.Cache
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\ClassLibrary1.dll
+C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\ClassLibrary1.pdb

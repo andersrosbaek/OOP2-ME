@@ -1,0 +1,46 @@
+﻿<Window x:Class="WPF_GUI.RegisterVehicle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="300" Width="300">
+    <Grid>
+        <RadioButton x:Name="btnCar" Content="Car" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" IsChecked="True" GroupName="vehicleType" Checked="btnCar_Checked"/>
+        <RadioButton x:Name="btnTruck" Content="Truck" HorizontalAlignment="Left" Margin="142,10,0,0" VerticalAlignment="Top" GroupName="vehicleType" Checked="btnTruck_Checked"/>
+        <ComboBox x:Name="btnVehicleModel" HorizontalAlignment="Left" Margin="90,49,0,0" VerticalAlignment="Top" Width="119" Tag="" SelectionChanged="btnCarModel_SelectionChanged" SelectedIndex="0">
+            <ComboBoxItem Content="&lt;Select Model&gt;"/>
+            <ComboBoxItem Cursor="" Content="Toyota"/>
+            <ComboBoxItem Content="Lada"/>
+        </ComboBox>
+        <Label x:Name="lblModel" Content="Model" HorizontalAlignment="Left" Margin="41,45,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="btnVehicleColor" HorizontalAlignment="Left" Margin="90,80,0,0" VerticalAlignment="Top" Width="119" Tag="" SelectionChanged="btnCarColor_SelectionChanged" SelectedIndex="0">
+            <ComboBoxItem Content="&lt;Select Color&gt;"/>
+            <ComboBoxItem Cursor="" Content="Red" Background="Red"/>
+            <ComboBoxItem Content="Green" Background="#FF23FF00"/>
+            <ComboBoxItem Background="Magenta" Content="Pink"/>
+        </ComboBox>
+        <Label x:Name="lblColor" Content="Color" HorizontalAlignment="Left" Margin="41,76,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPrice" Content="Price" HorizontalAlignment="Left" Margin="41,107,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="inputVehiclePrice" HorizontalAlignment="Left" Height="23" Margin="90,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Text="0" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="49,176,0,0" VerticalAlignment="Top" Width="75" Click="btnCancel_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFFF5757" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnDone" Content="Register" HorizontalAlignment="Left" Margin="142,176,0,0" VerticalAlignment="Top" Width="75" Click="btnRegister_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFACFD9A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="lblStatus" Content="" HorizontalAlignment="Left" Margin="49,213,0,0" VerticalAlignment="Top" Width="168"/>
+
+    </Grid>
+</Window>

@@ -24,16 +24,21 @@ namespace WPF_GUI
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void gotoRegisterCustomer(object sender, RoutedEventArgs e)
         {
             RegisterCustomer regCust = new RegisterCustomer();
             regCust.Show();
-            
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void gotoExit(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void gotoRegisterCar(object sender, RoutedEventArgs e)
+        {
+            RegisterVehicle regVechicle = new RegisterVehicle();
+            regVechicle.Show();
         }
     }
 }

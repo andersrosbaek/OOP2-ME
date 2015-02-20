@@ -1,0 +1,4 @@
+*.cache
+WindowsFormsApplication1/ClassLibrary1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/GUI.csproj.FileListAbsolute.txt
