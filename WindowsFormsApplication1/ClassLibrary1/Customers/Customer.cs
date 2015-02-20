@@ -11,5 +11,11 @@ namespace Domain
     {
         public string Address { set; get; }
         public int Phone { set; get; }
+
+        public Customer(string address, int phone)
+        {
+            Address = address;
+            Phone = phone;
+        }
     }
 }

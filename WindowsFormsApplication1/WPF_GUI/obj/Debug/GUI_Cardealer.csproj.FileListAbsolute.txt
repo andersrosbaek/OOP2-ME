@@ -49,3 +49,7 @@ C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\
 C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\GUI_Cardealer.csproj.GenerateResource.Cache
 C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\ClassLibrary1.dll
 C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\ClassLibrary1.pdb
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\RegisterVehicle.baml
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\RegisterVehicle.g.cs
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\ClassLibrary1.dll
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\ClassLibrary1.pdb

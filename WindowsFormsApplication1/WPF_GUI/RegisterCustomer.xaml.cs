@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Domain;
 
 namespace WPF_GUI
 {
@@ -24,35 +25,58 @@ namespace WPF_GUI
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void CheckNumberOnly(object sender, TextChangedEventArgs e)
         {
-            string actualdata = string.Empty;
-            char[] entereddata = Number.Text.ToCharArray();
-            foreach (char aChar in entereddata.AsEnumerable())
+            GuiUtil.checkNumerical(sender as TextBox);
+        }
+
+        private void PrivateRadiobutton(object sender, RoutedEventArgs e)
+        {
+            PrivateGrid.Visibility = System.Windows.Visibility.Visible;
+            BusinessGrid.Visibility = System.Windows.Visibility.Collapsed; 
+        }
+
+        private void BusinessRadiobutton(object sender, RoutedEventArgs e)
+        {
+            PrivateGrid.Visibility = System.Windows.Visibility.Collapsed;
+            BusinessGrid.Visibility = System.Windows.Visibility.Visible; 
+        }
+
+        private void CreatePrivateCustomer(object sender, RoutedEventArgs e)
+        {
+            string sex = "";
+            if(Private_Male.IsChecked == true)
             {
-                if (Char.IsDigit(aChar))
-                {
-                    actualdata = actualdata + aChar;
-                    // MessageBox.Show(aChar.ToString());
-                }
-                else
-                {
-                    MessageBox.Show(aChar + " is not numeric");
-                    actualdata.Replace(aChar, ' ');
-                    actualdata.Trim();
-                }
+                sex = "Male";
             }
-            Number.Text = actualdata;
+            else if(Private_Female.IsChecked == true){
+                sex = "Female";
+            }
+
+
+            DateTime date;
+            date = (DateTime) Private_Date.SelectedDate;
+
+            string address  = Private_Address.Text;
+            int phone       = Int32.Parse(Private_Number.Text);
+            string name     = Private_Name.Text;
+
+            Cardealer.getInstance().registerPrivateCustomer(address, phone, name, date, sex);
+
+            
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        private void CreateBusinessCustomer(object sender, RoutedEventArgs e)
         {
-            PrivateGrid.Visibility = System.Windows.Visibility.Visible; 
-        }
+            string address          = Business_Address.Text;
+            int phone              = Int32.Parse(Business_Number.Text);
+            string name             = Private_Name.Text;
+            int seNumber            = Int32.Parse(Business_SENumber.Text);
+            string contactPerson    = Business_Contact.Text;
+            int fax                 = Int32.Parse(Business_Fax.Text);
+            string companyName      = Business_Name.Text;
 
-        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
-        {
-            PrivateGrid.Visibility = System.Windows.Visibility.Hidden; 
+            Cardealer.getInstance().registerBusinessCustomer(address, phone, seNumber, contactPerson, fax, companyName);
         }
         
     }

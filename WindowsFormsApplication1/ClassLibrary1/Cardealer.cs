@@ -9,8 +9,8 @@ namespace Domain
 {
     public class Cardealer
     {
-        private List<Private> privateCustomers = new List<Private>();
-        private List<Business> businessCustomers = new List<Business>();
+        private List<PrivateCustomer> privateCustomers = new List<PrivateCustomer>();
+        private List<BusinessCustomer> businessCustomers = new List<BusinessCustomer>();
         private List<Car> cars = new List<Car>();
         private List<Truck> trucks = new List<Truck>();
 
@@ -38,14 +38,14 @@ namespace Domain
             }
         }
 
-        public void registerPrivate()
+        public void registerPrivateCustomer(string address, int phone, string name, DateTime age, string sex)
         {
-
+            privateCustomers.Add(new PrivateCustomer(address, phone, name, age, sex));
         }
 
-        public void registeBusiness()
+        public void registerBusinessCustomer(string address, int phone, int seNumber, string contactPerson, int fax, string companyName)
         {
-
+            businessCustomers.Add(new BusinessCustomer(address, phone, seNumber, contactPerson, fax, companyName));
         }
     }
 }
