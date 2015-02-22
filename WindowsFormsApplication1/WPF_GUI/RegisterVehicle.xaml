@@ -7,7 +7,7 @@
         <RadioButton x:Name="btnTruck" Content="Truck" HorizontalAlignment="Left" Margin="142,10,0,0" VerticalAlignment="Top" GroupName="vehicleType" Checked="btnTruck_Checked"/>
         <ComboBox x:Name="btnVehicleModel" HorizontalAlignment="Left" Margin="90,49,0,0" VerticalAlignment="Top" Width="119" Tag="" SelectionChanged="btnCarModel_SelectionChanged" SelectedIndex="0">
             <ComboBoxItem Content="&lt;Select Model&gt;"/>
-            <ComboBoxItem Cursor="" Content="Toyota"/>
+            <ComboBoxItem Content="Toyota"/>
             <ComboBoxItem Content="Lada"/>
         </ComboBox>
         <Label x:Name="lblModel" Content="Model" HorizontalAlignment="Left" Margin="41,45,0,0" VerticalAlignment="Top"/>

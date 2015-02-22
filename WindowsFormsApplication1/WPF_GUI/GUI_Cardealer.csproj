@@ -57,6 +57,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="GuiUtil.cs" />
+    <Compile Include="RegisterContract.xaml.cs">
+      <DependentUpon>RegisterContract.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegisterCustomer.xaml.cs">
       <DependentUpon>RegisterCustomer.xaml</DependentUpon>
     </Compile>
@@ -82,6 +85,10 @@
       <DependentUpon>Login.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RegisterContract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegisterCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

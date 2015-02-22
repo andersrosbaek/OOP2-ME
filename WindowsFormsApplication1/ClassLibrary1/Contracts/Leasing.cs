@@ -9,7 +9,7 @@ namespace Domain
 {
     public class Leasing:Contract
     {
-        public Leasing(Customer customer) : base (customer)
+        public Leasing(Customer customer, Vehicle vehicle) : base (customer, vehicle)
         {
 
         }

@@ -47,5 +47,29 @@ namespace Domain
         {
             businessCustomers.Add(new BusinessCustomer(address, phone, seNumber, contactPerson, fax, companyName));
         }
+
+        public object[] getPrivateCustomers()
+        {
+            object[] pC = privateCustomers.ToArray();
+            return pC;
+        }
+
+        public object[] getBusinessCustomers()
+        {
+            object[] bC = businessCustomers.ToArray();
+            return bC;
+        }
+
+        public object[] getCars()
+        {
+            object[] c = cars.ToArray();
+            return c;
+        }
+
+        public object[] getTrucks()
+        {
+            object[] t = trucks.ToArray();
+            return t;
+        }
     }
 }

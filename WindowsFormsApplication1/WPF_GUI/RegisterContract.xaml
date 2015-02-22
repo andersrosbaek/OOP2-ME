@@ -1,0 +1,89 @@
+﻿<Window x:Class="WPF_GUI.RegisterContract"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Register contract" Height="357" Width="313">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="39*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Contract type:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+        <RadioButton Content="Sale" Grid.Column="1" HorizontalAlignment="Left" Margin="28,20,0,0" VerticalAlignment="Top" GroupName="type" Checked="SaleRadioButton"/>
+        <RadioButton Content="Lease" Grid.Column="1" HorizontalAlignment="Left" Margin="106,20,0,0" VerticalAlignment="Top" GroupName="type" Checked="LeaseRadioButton"/>
+
+        <Grid x:Name="SalesGrid" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="278" VerticalAlignment="Top" Width="305" Margin="0,49,0,0" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="22*"/>
+                <ColumnDefinition Width="39*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Customer:" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Car model:" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Color:" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Price:" HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Commission:" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Total cost:" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+
+            <ComboBox x:Name="btnCustomer" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="25,12,0,0" VerticalAlignment="Top" Width="145" SelectedIndex="0">
+                <ComboBoxItem Content="&lt;Select Customer&gt;"/>
+            </ComboBox>
+            <ComboBox x:Name="bntVehicleModel" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="25,43,0,0" VerticalAlignment="Top" Width="145" SelectedIndex="0">
+                <ComboBoxItem Content="&lt;Select Model&gt;"/>
+            </ComboBox>
+            <ComboBox x:Name="bntVehicleColor" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="25,74,0,0" VerticalAlignment="Top" Width="145" SelectedIndex="0">
+                <ComboBoxItem Content="&lt;Select Color&gt;"/>
+            </ComboBox>
+            <ComboBox x:Name="bntVehiclePrice" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="25,105,0,0" VerticalAlignment="Top" Width="145" SelectedIndex="0">
+                <ComboBoxItem Content="&lt;Select Price&gt;"/>
+            </ComboBox>
+            <ComboBox x:Name="btnCommissionSelection" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="25,136,0,0" VerticalAlignment="Top" Width="145" SelectedIndex="0">
+                <ComboBoxItem Content="&gt;Select Commission&gt;"/>
+                <ComboBoxItem Content="5 %"/>
+                <ComboBoxItem Content="10 %"/>
+                <ComboBoxItem Content="20 %"/>
+                <ComboBoxItem Content="30 %"/>
+            </ComboBox>
+            <Label x:Name="lblTotalVehicleCost" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="25,167,0,0" VerticalAlignment="Top" Width="145"/>
+            <Button Content="Create sale" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="57,234,0,0" VerticalAlignment="Top" Width="110" Click="createSalesContract"/>
+
+        </Grid>
+
+        <Grid x:Name="LeaseGrid" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="278" VerticalAlignment="Top" Width="305" Margin="0,49,0,0" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="22*"/>
+                <ColumnDefinition Width="39*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Company:" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Car model:" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Color:" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Leasing Price:" HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Commission:" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+            <Label Content="Total cost:" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+
+            <ComboBox x:Name="btnCompany" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="25,12,0,0" VerticalAlignment="Top" Width="145" SelectedIndex="0">
+                <ComboBoxItem Content="&lt;Select Customer&gt;"/>
+            </ComboBox>
+            <ComboBox x:Name="bntCompanyVehicleModel" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="25,43,0,0" VerticalAlignment="Top" Width="145" SelectedIndex="0">
+                <ComboBoxItem Content="&lt;Select Model&gt;"/>
+            </ComboBox>
+            <ComboBox x:Name="bntCompanyVehicleColor" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="25,74,0,0" VerticalAlignment="Top" Width="145" SelectedIndex="0">
+                <ComboBoxItem Content="&lt;Select Color&gt;"/>
+            </ComboBox>
+            <ComboBox x:Name="bntCompanyVehiclePrice" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="25,105,0,0" VerticalAlignment="Top" Width="145" SelectedIndex="0">
+                <ComboBoxItem Content="&lt;Select Price&gt;"/>
+            </ComboBox>
+            <ComboBox x:Name="btnCompanyCommissionSelection" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="25,136,0,0" VerticalAlignment="Top" Width="145" SelectedIndex="0">
+                <ComboBoxItem Content="&gt;Select Commission&gt;"/>
+                <ComboBoxItem Content="5 %"/>
+                <ComboBoxItem Content="10 %"/>
+                <ComboBoxItem Content="20 %"/>
+                <ComboBoxItem Content="30 %"/>
+            </ComboBox>
+            <Label x:Name="lblCompanyTotalVehicleCost" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="25,167,0,0" VerticalAlignment="Top" Width="145"/>
+            <Button Content="Create Lease" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="57,234,0,0" VerticalAlignment="Top" Width="110" Click="createLeasingContrac"/>
+
+
+
+        </Grid>
+
+    </Grid>
+</Window>

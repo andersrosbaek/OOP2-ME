@@ -10,3 +10,7 @@ C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\
 C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
 C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
 C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Arcion\Desktop\6.Semester\Programmering\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

@@ -11,9 +11,12 @@ namespace Domain
     {
         public Customer Customer { private set; get; }
 
-        public Contract(Customer customer)
+        public Vehicle Vehicle { private set; get; }
+
+        public Contract(Customer customer, Vehicle vehicle)
         {
             Customer = customer;
+            Vehicle = vehicle;
         }
     }
 }

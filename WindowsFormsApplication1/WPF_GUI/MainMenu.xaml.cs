@@ -40,5 +40,11 @@ namespace WPF_GUI
             RegisterVehicle regVechicle = new RegisterVehicle();
             regVechicle.Show();
         }
+
+        private void gotoRegisterContract(object sender, RoutedEventArgs e)
+        {
+            RegisterContract regContract = new RegisterContract();
+            regContract.Show();
+        }
     }
 }
