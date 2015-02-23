@@ -15,11 +15,14 @@ namespace Domain
 
         public DateTime Date { private set; get; }
 
-        public Contract(Customer customer, Vehicle vehicle)
+        public double TotalPrice { private set; get; }
+
+        public Contract(Customer customer, Vehicle vehicle, double totalPrice)
         {
             Customer = customer;
             Vehicle = vehicle;
             Date = DateTime.Today;
+            TotalPrice = totalPrice;
         }
     }
 }

@@ -15,7 +15,8 @@ namespace Domain
         private List<Car> cars = new List<Car>();
         private List<Truck> trucks  = new List<Truck>();
 
-        private List<Leasing> leaseContracts = new List<Leasing>();
+        private List<Sale> salesContracts = new List<Sale>();
+        private List<Leasing> leasingContracts = new List<Leasing>();
 
         private static Cardealer instance;
 
@@ -51,6 +52,8 @@ namespace Domain
             businessCustomers.Add(new BusinessCustomer(address, phone, seNumber, contactPerson, fax, companyName));
         }
 
+        
+
         public List<PrivateCustomer> getPrivateCustomers()
         {
             return privateCustomers;
@@ -69,6 +72,26 @@ namespace Domain
         public List<Truck> getTrucks()
         {
             return trucks;
+        }
+
+        public void registerSalesContract(PrivateCustomer pc, Car car, double totalprice)
+        {
+            salesContracts.Add(new Sale(pc,car,totalprice));
+        }
+
+        public void registerLeasingContract(BusinessCustomer bc, Truck truck, double totalPrice, double monthlyPrice)
+        {
+            leasingContracts.Add(new Leasing(bc,truck,totalPrice,monthlyPrice));
+        }
+
+        public List<Sale> getSalesContracts()
+        {
+            return salesContracts;
+        }
+
+        public List<Leasing> getLeasingContracts()
+        {
+            return leasingContracts;
         }
     }
 }

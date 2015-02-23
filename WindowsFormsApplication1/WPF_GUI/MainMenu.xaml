@@ -16,7 +16,7 @@
         <Label Content="Contracts" HorizontalAlignment="Left" Margin="40,9,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
         <Button Content="Register a car" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Width="120" Height="25" Grid.Column="1" Click="gotoRegisterCar"/>
         <Button Content="Register a customer" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Width="120" Height="25"  Click="gotoRegisterCustomer"/>
-        <Button Content="Contracts registry" Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="40,40,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Contracts registry" Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="40,40,0,0" VerticalAlignment="Top" Width="120" Click="gotoContractList"/>
         <Button Content="Register a contract" Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="40,80,0,0" VerticalAlignment="Top" Width="120" Click="gotoRegisterContract"/>
 
     </Grid>

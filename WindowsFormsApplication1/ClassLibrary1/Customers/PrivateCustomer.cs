@@ -21,9 +21,9 @@ namespace Domain
             Sex = sex;
         }
 
-        public PrivateCustomer() 
+        public override string ToString()
         {
-
+            return Name;
         }
     }
 }

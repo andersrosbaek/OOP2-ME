@@ -22,5 +22,10 @@ namespace Domain
             Fax = fax;
             NameOfCompany = companyName;
         }
+
+        public override string ToString()
+        {
+            return NameOfCompany;
+        }
     }
 }

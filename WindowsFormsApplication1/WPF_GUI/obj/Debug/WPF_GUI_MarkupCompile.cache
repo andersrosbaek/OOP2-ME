@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\App.xaml
-7-591124664
+8-2125640438
 
-121404820967
+13-266640137
 13-1867416351
-Vehicles\VehicleRegistry.xaml;Customers\CustomerRegistry.xaml;MainMenu.xaml;Login.xaml;RegisterContract.xaml;Customers\RegisterCustomer.xaml;Vehicles\RegisterVehicle.xaml;
+Contracts\ContractRegistry.xaml;Vehicles\VehicleRegistry.xaml;Customers\CustomerRegistry.xaml;MainMenu.xaml;Login.xaml;Contracts\RegisterContract.xaml;Customers\RegisterCustomer.xaml;Vehicles\RegisterVehicle.xaml;
 
 False
 

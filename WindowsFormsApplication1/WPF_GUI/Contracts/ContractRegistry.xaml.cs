@@ -19,24 +19,27 @@ namespace WPF_GUI
     /// Interaction logic for CustomerRegistry.xaml
     /// </summary>
     public partial class ContractRegistry : Window
-    {            
-        List<Car> cars      = Cardealer.getInstance().getCars();
-        List<Truck> trucks  = Cardealer.getInstance().getTrucks();
+    {
+        List<Sale> sales = Cardealer.getInstance().getSalesContracts();
+        List<Leasing> leasing = Cardealer.getInstance().getLeasingContracts();
 
         public ContractRegistry()
         {
             InitializeComponent();
+
+            
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            ContractGrid.ItemsSource = cars;
+            ContractGrid.ItemsSource = sales;
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
-            ContractGrid.ItemsSource = trucks;
-
+            ContractGrid.ItemsSource = leasing;
         }
+
+       
     }
 }

@@ -9,11 +9,11 @@ namespace Domain
 {
     public class Leasing:Contract
     {
-        private DateTime EndDate { private set; get; }
+        public double MonthlyPrice { private set; get; }
 
-        public Leasing(BusinessCustomer customer, Truck vehicle, DateTime endDate) : base (customer, vehicle)
+        public Leasing(BusinessCustomer customer, Truck vehicle, double totalPrice, double monthlyPrice) : base (customer, vehicle, totalPrice)
         {
-            
+            MonthlyPrice = monthlyPrice;
         }
     }
 }

@@ -23,7 +23,7 @@ namespace WPF_GUI
         public MainScreen()
         {
             InitializeComponent();
-            FillDummyItems();
+            //FillDummyItems();
         }
 
         private static void FillDummyItems()
@@ -78,6 +78,12 @@ namespace WPF_GUI
         {
             VehicleRegistry vechReg = new VehicleRegistry();
             vechReg.Show();
+        }
+
+        private void gotoContractList(object sender, RoutedEventArgs e)
+        {
+            ContractRegistry contractList = new ContractRegistry();
+            contractList.Show();
         }
     }
 }

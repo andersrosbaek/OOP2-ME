@@ -9,7 +9,7 @@ namespace Domain
 {
     public class Sale:Contract
     {
-        public Sale(PrivateCustomer customer, Car vehicle) : base (customer, vehicle)
+        public Sale(PrivateCustomer customer, Car vehicle, double totalPrice) : base(customer, vehicle, totalPrice)
         {
 
         }

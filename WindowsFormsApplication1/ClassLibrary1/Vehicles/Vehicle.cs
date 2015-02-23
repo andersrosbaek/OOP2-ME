@@ -22,5 +22,10 @@ namespace Domain
             this.Color = color;
             this.Price = price;
         }
+
+        public override string ToString()
+        {
+            return Color + " " + Model;
+        }
     }
 }
