@@ -24,19 +24,46 @@ namespace WPF_GUI
         {
             InitializeComponent();
 
-            object[] privateCustomers = Cardealer.getInstance().getPrivateCustomers();
-            object[] businessCustomers = Cardealer.getInstance().getBusinessCustomers();
-            object[] cars = Cardealer.getInstance().getCars();
-            object[] trucks = Cardealer.getInstance().getTrucks();
+            List<PrivateCustomer> privateCustomers = Cardealer.getInstance().getPrivateCustomers();
+            List<BusinessCustomer> businessCustomers = Cardealer.getInstance().getBusinessCustomers();
+            List<Car> cars = Cardealer.getInstance().getCars();
+            List<Truck> trucks = Cardealer.getInstance().getTrucks();
 
-            
-            foreach(object name in privateCustomers)
+
+            foreach (PrivateCustomer name in privateCustomers)
             {
                 if(name != null)
                 {
-                    btnCustomer.Items.Add(name.GetType());
+                    btnCustomer.Items.Add(name.Name);
                 }
                 
+            }
+
+            foreach (BusinessCustomer company in businessCustomers)
+            {
+                if (company != null)
+                {
+                    btnCompany.Items.Add(company.NameOfCompany);
+                }
+
+            }
+
+            foreach (Car model in cars)
+            {
+                if (model != null)
+                {
+                    bntVehicleModel.Items.Add(model.Model);
+                }
+
+            }
+
+            foreach (Truck model in trucks)
+            {
+                if (model != null)
+                {
+                    bntCompanyVehicleModel.Items.Add(model.Model);
+                }
+
             }
             
         }
