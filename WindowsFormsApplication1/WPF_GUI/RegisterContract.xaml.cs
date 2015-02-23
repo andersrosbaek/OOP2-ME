@@ -24,10 +24,10 @@ namespace WPF_GUI
         {
             InitializeComponent();
 
-            List<PrivateCustomer> privateCustomers = Cardealer.getInstance().getPrivateCustomers();
-            List<BusinessCustomer> businessCustomers = Cardealer.getInstance().getBusinessCustomers();
-            List<Car> cars = Cardealer.getInstance().getCars();
-            List<Truck> trucks = Cardealer.getInstance().getTrucks();
+            List<PrivateCustomer> privateCustomers      = Cardealer.getInstance().getPrivateCustomers();
+            List<BusinessCustomer> businessCustomers    = Cardealer.getInstance().getBusinessCustomers();
+            List<Car> cars                              = Cardealer.getInstance().getCars();
+            List<Truck> trucks                          = Cardealer.getInstance().getTrucks();
 
 
             foreach (PrivateCustomer name in privateCustomers)

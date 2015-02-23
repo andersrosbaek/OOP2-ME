@@ -13,10 +13,13 @@ namespace Domain
 
         public Vehicle Vehicle { private set; get; }
 
+        public DateTime Date { private set; get; }
+
         public Contract(Customer customer, Vehicle vehicle)
         {
             Customer = customer;
             Vehicle = vehicle;
+            Date = DateTime.Today;
         }
     }
 }

@@ -9,10 +9,13 @@ namespace Domain
 {
     public class Cardealer
     {
-        private List<PrivateCustomer> privateCustomers = new List<PrivateCustomer>();
+        private List<PrivateCustomer> privateCustomers  = new List<PrivateCustomer>();
         private List<BusinessCustomer> businessCustomers = new List<BusinessCustomer>();
+
         private List<Car> cars = new List<Car>();
-        private List<Truck> trucks = new List<Truck>();
+        private List<Truck> trucks  = new List<Truck>();
+
+        private List<Leasing> leaseContracts = new List<Leasing>();
 
         private static Cardealer instance;
 

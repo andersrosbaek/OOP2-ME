@@ -41,12 +41,12 @@
   <ItemGroup>
     <Compile Include="Cardealer.cs" />
     <Compile Include="Customers\BusinessCustomer.cs" />
-    <Compile Include="Cars\Truck.cs" />
+    <Compile Include="Vehicles\Truck.cs" />
     <Compile Include="Contracts\Leasing.cs" />
     <Compile Include="Contracts\Contract.cs" />
-    <Compile Include="Cars\Vehicle.cs" />
+    <Compile Include="Vehicles\Vehicle.cs" />
     <Compile Include="Customers\Customer.cs" />
-    <Compile Include="Cars\Car.cs" />
+    <Compile Include="Vehicles\Car.cs" />
     <Compile Include="Customers\PrivateCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

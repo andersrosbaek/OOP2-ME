@@ -20,5 +20,10 @@ namespace Domain
             Age = age;
             Sex = sex;
         }
+
+        public PrivateCustomer() 
+        {
+
+        }
     }
 }

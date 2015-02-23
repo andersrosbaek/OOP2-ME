@@ -17,5 +17,10 @@ namespace Domain
             Address = address;
             Phone = phone;
         }
+
+        public Customer()
+        {
+
+        }
     }
 }

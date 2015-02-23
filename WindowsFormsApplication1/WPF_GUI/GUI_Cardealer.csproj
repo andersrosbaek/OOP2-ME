@@ -56,16 +56,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Vehicles\VehicleRegistry.xaml.cs">
+      <DependentUpon>VehicleRegistry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\CustomerRegistry.xaml.cs">
+      <DependentUpon>CustomerRegistry.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GuiUtil.cs" />
     <Compile Include="RegisterContract.xaml.cs">
       <DependentUpon>RegisterContract.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegisterCustomer.xaml.cs">
+    <Compile Include="Customers\RegisterCustomer.xaml.cs">
       <DependentUpon>RegisterCustomer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegisterVehicle.xaml.cs">
+    <Compile Include="Vehicles\RegisterVehicle.xaml.cs">
       <DependentUpon>RegisterVehicle.xaml</DependentUpon>
     </Compile>
+    <Page Include="Vehicles\VehicleRegistry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Customers\CustomerRegistry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -89,11 +103,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegisterCustomer.xaml">
+    <Page Include="Customers\RegisterCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegisterVehicle.xaml">
+    <Page Include="Vehicles\RegisterVehicle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,6 +144,9 @@
       <Project>{412e05c2-ed00-4bd0-951f-906b0421ccae}</Project>
       <Name>Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contracts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
