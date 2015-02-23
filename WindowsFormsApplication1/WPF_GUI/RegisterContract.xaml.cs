@@ -20,16 +20,16 @@ namespace WPF_GUI
     /// </summary>
     public partial class RegisterContract : Window
     {
+        List<PrivateCustomer> privateCustomers = Cardealer.getInstance().getPrivateCustomers();
+        List<BusinessCustomer> businessCustomers = Cardealer.getInstance().getBusinessCustomers();
+        List<Car> cars = Cardealer.getInstance().getCars();
+        List<Truck> trucks = Cardealer.getInstance().getTrucks();
+
         public RegisterContract()
         {
             InitializeComponent();
-
-            List<PrivateCustomer> privateCustomers = Cardealer.getInstance().getPrivateCustomers();
-            List<BusinessCustomer> businessCustomers = Cardealer.getInstance().getBusinessCustomers();
-            List<Car> cars = Cardealer.getInstance().getCars();
-            List<Truck> trucks = Cardealer.getInstance().getTrucks();
-
-
+            fillComboBoxes();
+            
             foreach (PrivateCustomer name in privateCustomers)
             {
                 if(name != null)
@@ -52,7 +52,7 @@ namespace WPF_GUI
             {
                 if (model != null)
                 {
-                    bntVehicleModel.Items.Add(model.Model);
+                    btnVehicleModel.Items.Add(model.Model);
                 }
 
             }
@@ -61,23 +61,114 @@ namespace WPF_GUI
             {
                 if (model != null)
                 {
-                    bntCompanyVehicleModel.Items.Add(model.Model);
+                    btnCompanyVehicleModel.Items.Add(model.Model);
+                }
+            }
+        }
+
+        private void fillComboBoxes()
+        {
+            btnCustomer.Items.Add("Select a customer");
+            btnVehicleModel.Items.Add("Select a model");
+            btnVehicleColor.Items.Add("Select a color");
+            btnVehiclePrice.Items.Add("Select a price");
+            btnCompany.Items.Add("Select a company");
+            btnCompanyVehicleModel.Items.Add("Select a model");
+            btnCompanyVehicleColor.Items.Add("Select a color");
+            btnCompanyVehiclePrice.Items.Add("Select a price");
+        }
+
+        private void SalesRadioButton(object sender, RoutedEventArgs e)
+        {
+            SalesGrid.Visibility = System.Windows.Visibility.Visible;
+            LeasingGrid.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        private void LeasingRadioButton(object sender, RoutedEventArgs e)
+        {
+            LeasingGrid.Visibility = System.Windows.Visibility.Visible;
+            SalesGrid.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        private void inputVehicleColor(object sender, SelectionChangedEventArgs e)
+        {
+            btnVehicleColor.Items.Clear();
+            btnVehicleColor.Items.Add("Select a color");
+            btnVehicleColor.SelectedIndex = 0;
+            foreach (Car model in cars)
+            {
+                if (String.Equals(model.Model, btnVehicleModel.SelectedItem))
+                {
+                    btnVehicleColor.Items.Add(model.Color);
                 }
 
             }
-            
         }
 
-        private void SaleRadioButton(object sender, RoutedEventArgs e)
+        private void inputVehiclePrice(object sender, SelectionChangedEventArgs e)
         {
-            SalesGrid.Visibility = System.Windows.Visibility.Visible;
-            LeaseGrid.Visibility = System.Windows.Visibility.Collapsed;
+            btnVehiclePrice.Items.Clear();
+            btnVehiclePrice.Items.Add("Select a price");
+            btnVehiclePrice.SelectedIndex = 0;
+            foreach (Car model in cars)
+            {
+                if (String.Equals(model.Model, btnVehicleModel.SelectedItem) && String.Equals(model.Color, btnVehicleColor.SelectedItem))
+                {
+                    btnVehiclePrice.Items.Add(model.Price);
+                }
+
+            }
         }
 
-        private void LeaseRadioButton(object sender, RoutedEventArgs e)
+        private void inputTotalVehiclePrice(object sender, SelectionChangedEventArgs e)
         {
-            LeaseGrid.Visibility = System.Windows.Visibility.Visible;
-            SalesGrid.Visibility = System.Windows.Visibility.Collapsed;
+            if(btnVehiclePrice.SelectedIndex > 0 && btnCommissionSelection.SelectedIndex > 0)
+            {
+                double vehiclePrice = (double) btnVehiclePrice.SelectedItem;
+                double salesCommission = (double) btnCommissionSelection.SelectedItem;
+                lblTotalVehicleprice.Content = vehiclePrice + vehiclePrice * (salesCommission / 100);
+            }
+        }
+
+        private void inputCompanyVehicleColor(object sender, SelectionChangedEventArgs e)
+        {
+            btnCompanyVehicleColor.Items.Clear();
+            btnCompanyVehicleColor.Items.Add("Select a color");
+            btnCompanyVehicleColor.SelectedIndex = 0;
+            foreach (Truck model in trucks)
+            {
+                if (String.Equals(model.Model, btnCompanyVehicleModel.SelectedItem))
+                {
+                    btnCompanyVehicleColor.Items.Add(model.Color);
+                }
+
+            }
+        }
+
+        private void inputCompanyVehiclePrice(object sender, SelectionChangedEventArgs e)
+        {
+            btnCompanyVehiclePrice.Items.Clear();
+            btnCompanyVehiclePrice.Items.Add("Select a price");
+            btnCompanyVehiclePrice.SelectedIndex = 0;
+            foreach (Truck model in trucks)
+            {
+                if (String.Equals(model.Model, btnCompanyVehicleModel.SelectedItem) && String.Equals(model.Color, btnCompanyVehicleColor.SelectedItem))
+                {
+                    btnCompanyVehiclePrice.Items.Add(model.Price);
+                }
+
+            }
+        }
+
+        private void inputTotalCompanyVehiclePrice(object sender, SelectionChangedEventArgs e)
+        {
+            if (btnCompanyVehiclePrice.SelectedIndex > 0 && btnCompanyCommissionSelection.SelectedIndex > 0)
+            {
+                double companyVehiclePrice = (double)btnCompanyVehiclePrice.SelectedItem;
+                double leasingCommission = (double)btnCompanyCommissionSelection.SelectedItem;
+                lblCompanyMonthlyVehicleCost.Content = (companyVehiclePrice + companyVehiclePrice * (leasingCommission / 100))/60;
+                lblCompanyTotalVehicleCost.Content = companyVehiclePrice + companyVehiclePrice * (leasingCommission / 100);
+            }
         }
 
         private void createSalesContract(object sender, RoutedEventArgs e)
@@ -89,6 +180,8 @@ namespace WPF_GUI
         {
 
         }
+
+        
 
         
     }
