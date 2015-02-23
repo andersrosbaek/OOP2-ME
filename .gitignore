@@ -2,3 +2,12 @@
 WindowsFormsApplication1/ClassLibrary1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/GUI.csproj.FileListAbsolute.txt
+*.pdb
+*.pdb
+WindowsFormsApplication1/ClassLibrary1/bin/Debug/ClassLibrary1.pdb
+*.dll
+WindowsFormsApplication1/ClassLibrary1/obj/Debug/ClassLibrary1.pdb
+*.pdb
+*.exe
+WindowsFormsApplication1/WPF_GUI/bin/Debug/WPF_GUI.exe
+*.exe
