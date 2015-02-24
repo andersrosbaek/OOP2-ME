@@ -11,3 +11,9 @@ WindowsFormsApplication1/ClassLibrary1/obj/Debug/ClassLibrary1.pdb
 *.exe
 WindowsFormsApplication1/WPF_GUI/bin/Debug/WPF_GUI.exe
 *.exe
+WindowsFormsApplication1/Cardealer.v12.suo
+WindowsFormsApplication1/WPF_GUI/bin/Debug/WPF_GUI.pdb
+WindowsFormsApplication1/WPF_GUI/bin/Debug/WPF_GUI.vshost.exe.manifest
+*.exe
+WindowsFormsApplication1/WPF_GUI/obj/Debug/WPF_GUI.pdb
+*.pdb

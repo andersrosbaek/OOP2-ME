@@ -45,38 +45,85 @@ namespace WPF_GUI
         private void CreatePrivateCustomer(object sender, RoutedEventArgs e)
         {
             string sex = "";
-            if(Private_Male.IsChecked == true)
+            if (Private_Male.IsChecked == true)
             {
                 sex = "Male";
             }
-            else if(Private_Female.IsChecked == true){
+            else if (Private_Female.IsChecked == true)
+            {
                 sex = "Female";
             }
 
+            if (checkForPrivateFields(sex))
+            {
+                DateTime date;
+                date = (DateTime)Private_Date.SelectedDate;
 
-            DateTime date;
-            date = (DateTime) Private_Date.SelectedDate;
+                string address = Private_Address.Text;
+                int phone = Int32.Parse(Private_Number.Text);
+                string name = Private_Name.Text;
 
-            string address  = Private_Address.Text;
-            int phone       = Int32.Parse(Private_Number.Text);
-            string name     = Private_Name.Text;
+                Cardealer.getInstance().registerPrivateCustomer(address, phone, name, date, sex);
 
-            Cardealer.getInstance().registerPrivateCustomer(address, phone, name, date, sex);
+            }
+        }
 
-            
+        private bool checkForPrivateFields(string sex)
+        {
+            int empty = 0;
+            string needs = "\n";
+            if (Private_Number.Text == "")          { empty++; needs += "Number \n"; }
+            if (Private_Address.Text == "")         { empty++; needs += "Adress \n"; }
+            if (Private_Name.Text == "")            { empty++; needs += "Name \n"; }
+            if (sex == "")                          { empty++; needs += "Sex \n"; }
+            if (Private_Date.SelectedDate == null)  { empty++; needs += "Date \n"; }
+
+
+            if(empty > 0){
+                MessageBox.Show("You need to fill these fields: \n" + needs);
+                return false;
+            }else{
+                return true;
+            }
         }
 
         private void CreateBusinessCustomer(object sender, RoutedEventArgs e)
         {
-            string address          = Business_Address.Text;
-            int phone              = Int32.Parse(Business_Number.Text);
-            string name             = Private_Name.Text;
-            int seNumber            = Int32.Parse(Business_SENumber.Text);
-            string contactPerson    = Business_Contact.Text;
-            int fax                 = Int32.Parse(Business_Fax.Text);
-            string companyName      = Business_Name.Text;
+            if (checkForBusinessFields()) { 
+                string address          = Business_Address.Text;
+                int phone              = Int32.Parse(Business_Number.Text);
+                string name             = Private_Name.Text;
+                int seNumber            = Int32.Parse(Business_SENumber.Text);
+                string contactPerson    = Business_Contact.Text;
+                int fax                 = Int32.Parse(Business_Fax.Text);
+                string companyName      = Business_Name.Text;
 
-            Cardealer.getInstance().registerBusinessCustomer(address, phone, seNumber, contactPerson, fax, companyName);
+                Cardealer.getInstance().registerBusinessCustomer(address, phone, seNumber, contactPerson, fax, companyName);
+            }
+        }
+
+        private bool checkForBusinessFields()
+        {
+            int empty = 0;
+            string needs = "\n";
+
+            if (Business_Number.Text == "") { empty++; needs += "Number \n"; }
+            if (Business_Address.Text == "") { empty++; needs += "Adress \n"; }
+            if (Business_Name.Text == "") { empty++; needs += "Name \n"; }
+            if (Business_Fax.Text == "") { empty++; needs += "Fax \n"; }
+            if (Business_Contact.Text == "") { empty++; needs += "Contact \n"; }
+            if (Business_SENumber.Text == "") { empty++; needs += "SE-Number \n"; }
+
+
+            if (empty > 0)
+            {
+                MessageBox.Show("You need to fill these fields: \n" + needs);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
         
     }
