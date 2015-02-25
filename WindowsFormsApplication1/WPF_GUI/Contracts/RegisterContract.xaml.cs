@@ -182,53 +182,104 @@ namespace WPF_GUI
         {
             PrivateCustomer pc = null;
             Car car = null;
-            double totalPrice = (double) lblTotalVehicleprice.Content;
-
-            foreach(PrivateCustomer privateCust in privateCustomers)
+            if(checkSalesContractFields())
             {
-                if (privateCust.Name == btnCustomer.SelectedItem)
-                {
-                    pc = privateCust;
-                }
-            }
+                double totalPrice = (double)lblTotalVehicleprice.Content;
 
-            foreach (Car saleCar in cars)
+                foreach (PrivateCustomer privateCust in privateCustomers)
+                {
+                    if (privateCust.Name == btnCustomer.SelectedItem)
+                    {
+                        pc = privateCust;
+                    }
+                }
+
+                foreach (Car saleCar in cars)
+                {
+                    if (saleCar.Model == btnVehicleModel.SelectedItem && saleCar.Color == btnVehicleColor.SelectedItem && saleCar.Price == (double)btnVehiclePrice.SelectedItem)
+                    {
+                        car = saleCar;
+                    }
+                }
+
+                Cardealer.getInstance().registerSalesContract(pc, car, totalPrice);
+            }
+            
+        }
+
+        private bool checkSalesContractFields()
+        {
+            int empty = 0;
+            string needs = "\n";
+
+            if (btnCustomer.SelectedIndex == 0) { empty++; needs += "Customer \n"; }
+            if (btnVehicleModel.SelectedIndex == 0) { empty++; needs += "Car model \n"; }
+            if (btnVehicleColor.SelectedIndex == 0) { empty++; needs += "Color \n"; }
+            if (btnVehiclePrice.SelectedIndex == 0) { empty++; needs += "Price \n"; }
+            if (btnCommissionSelection.SelectedIndex == 0) { empty++; needs += "Commission \n"; }
+
+            if (empty > 0)
             {
-                if (saleCar.Model == btnVehicleModel.SelectedItem && saleCar.Color == btnVehicleColor.SelectedItem && saleCar.Price == (double) btnVehiclePrice.SelectedItem)
-                {
-                    car = saleCar;
-                }
+                MessageBox.Show("You need to fill these fields: \n" + needs);
+                return false;
             }
-
-            Cardealer.getInstance().registerSalesContract(pc,car,totalPrice);
+            else
+            {
+                return true;
+            }
         }
 
         private void createLeasingContrac(object sender, RoutedEventArgs e)
         {
             BusinessCustomer bc = null;
             Truck truck = null;
-            double totalPrice = (double) lblCompanyTotalVehicleCost.Content;
-            double monthlyPrice = (double)lblCompanyMonthlyVehicleCost.Content;
-
-            foreach (BusinessCustomer companyCust in businessCustomers)
+            if (checkLeasingContractFields())
             {
-                if (companyCust.NameOfCompany == btnCompany.SelectedItem)
-                {
-                    bc = companyCust;
-                }
-            }
+                double totalPrice = (double)lblCompanyTotalVehicleCost.Content;
+                double monthlyPrice = (double)lblCompanyMonthlyVehicleCost.Content;
 
-            foreach (Truck leaseTruck in trucks)
-            {
-                if (leaseTruck.Model == btnCompanyVehicleModel.SelectedItem && leaseTruck.Color == btnCompanyVehicleColor.SelectedItem && leaseTruck.Price == (double) btnCompanyVehiclePrice.SelectedItem)
+                foreach (BusinessCustomer companyCust in businessCustomers)
                 {
-                    truck = leaseTruck;
+                    if (companyCust.NameOfCompany == btnCompany.SelectedItem)
+                    {
+                        bc = companyCust;
+                    }
                 }
-            }
 
-            Cardealer.getInstance().registerLeasingContract(bc,truck,totalPrice,monthlyPrice);
+                foreach (Truck leaseTruck in trucks)
+                {
+                    if (leaseTruck.Model == btnCompanyVehicleModel.SelectedItem && leaseTruck.Color == btnCompanyVehicleColor.SelectedItem && leaseTruck.Price == (double)btnCompanyVehiclePrice.SelectedItem)
+                    {
+                        truck = leaseTruck;
+                    }
+                }
+
+                Cardealer.getInstance().registerLeasingContract(bc, truck, totalPrice, monthlyPrice);
+            }
+            
         }
 
+        private bool checkLeasingContractFields()
+        {
+            int empty = 0;
+            string needs = "\n";
+
+            if (btnCompany.SelectedIndex == 0) { empty++; needs += "Company \n"; }
+            if (btnCompanyVehicleModel.SelectedIndex == 0) { empty++; needs += "Car model \n"; }
+            if (btnCompanyVehicleColor.SelectedIndex == 0) { empty++; needs += "Color \n"; }
+            if (btnCompanyVehiclePrice.SelectedIndex == 0) { empty++; needs += "Leasing price \n"; }
+            if (btnCompanyCommissionSelection.SelectedIndex == 0) { empty++; needs += "Commission \n"; }
+
+            if (empty > 0)
+            {
+                MessageBox.Show("You need to fill these fields: \n" + needs);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         
 
         
