@@ -50,7 +50,7 @@ namespace WPF_GUI
             {
                 if (company != null)
                 {
-                    btnCompany.Items.Add(company.NameOfCompany);
+                    btnCompany.Items.Add(company.Name);
                 }
 
             }
@@ -188,7 +188,7 @@ namespace WPF_GUI
 
                 foreach (PrivateCustomer privateCust in privateCustomers)
                 {
-                    if (privateCust.Name == btnCustomer.SelectedItem)
+                    if (privateCust.Name == (string) btnCustomer.SelectedItem)
                     {
                         pc = privateCust;
                     }
@@ -196,7 +196,7 @@ namespace WPF_GUI
 
                 foreach (Car saleCar in cars)
                 {
-                    if (saleCar.Model == btnVehicleModel.SelectedItem && saleCar.Color == btnVehicleColor.SelectedItem && saleCar.Price == (double)btnVehiclePrice.SelectedItem)
+                    if (saleCar.Model == (string) btnVehicleModel.SelectedItem && saleCar.Color == (string) btnVehicleColor.SelectedItem && saleCar.Price == (double)btnVehiclePrice.SelectedItem)
                     {
                         car = saleCar;
                     }
@@ -240,7 +240,7 @@ namespace WPF_GUI
 
                 foreach (BusinessCustomer companyCust in businessCustomers)
                 {
-                    if (companyCust.NameOfCompany == btnCompany.SelectedItem)
+                    if (companyCust.Name == (string) btnCompany.SelectedItem)
                     {
                         bc = companyCust;
                     }
@@ -248,7 +248,7 @@ namespace WPF_GUI
 
                 foreach (Truck leaseTruck in trucks)
                 {
-                    if (leaseTruck.Model == btnCompanyVehicleModel.SelectedItem && leaseTruck.Color == btnCompanyVehicleColor.SelectedItem && leaseTruck.Price == (double)btnCompanyVehiclePrice.SelectedItem)
+                    if (leaseTruck.Model == (string) btnCompanyVehicleModel.SelectedItem && leaseTruck.Color == (string) btnCompanyVehicleColor.SelectedItem && leaseTruck.Price == (double)btnCompanyVehiclePrice.SelectedItem)
                     {
                         truck = leaseTruck;
                     }
