@@ -12,20 +12,18 @@ namespace Domain
         public int SENumber { set; get; }
         public string ContactPerson { set; get; }
         public int Fax { set; get; }
-        public string NameOfCompany { set; get; }
 
-        public BusinessCustomer(string address, int phone, int seNumber, string contactPerson, int fax, string companyName)
-            : base(address, phone)
+        public BusinessCustomer(string address, int phone, int seNumber, string contactPerson, int fax, string companyName, bool isVehicleNewsReciever)
+            : base(address, phone, companyName, isVehicleNewsReciever)
         {
             SENumber = seNumber;
             ContactPerson = contactPerson;
             Fax = fax;
-            NameOfCompany = companyName;
         }
 
         public override string ToString()
         {
-            return NameOfCompany;
+            return "Name: "+Name+", Contact Person: "+ContactPerson+", Phone: "+Phone+", Address"+Address+", SE #: "+SENumber;
         }
     }
 }

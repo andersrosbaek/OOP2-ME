@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domain;
+using Domain.Vehicles;
 
 namespace Domain
 {
@@ -19,7 +20,6 @@ namespace Domain
         private List<Leasing> leasingContracts = new List<Leasing>();
 
         private static Cardealer instance;
-
         public static Cardealer getInstance()
         {
             if(instance == null)
@@ -31,28 +31,47 @@ namespace Domain
         }
 
         public void registerVehicle(string type, string model, string color, double price)
-        { 
+        {
+            IVehicle vehicle = null;
+
             if(type == "car")
             {
-                cars.Add(new Car(model, color, price));
+                Car car = new Car(type, model, color, price);
+                vehicle = car;
+                cars.Add(car);
             }
             else if (type == "truck")
             {
-                trucks.Add(new Truck(model, color, price));
+                Truck truck = new Truck(type, model, color, price);
+                vehicle = truck;
+                trucks.Add(truck);
             }
+
+            if (vehicle != null)
+                Announcer.getInstance().AnnounceNewVehicle(vehicle);
         }
 
-        public void registerPrivateCustomer(string address, int phone, string name, DateTime age, string sex)
+        public void registerPrivateCustomer(string address, int phone, string name, DateTime age, string sex, bool isVehicleNewsReciever)
         {
-            privateCustomers.Add(new PrivateCustomer(address, phone, name, age, sex));
+            PrivateCustomer costumer = new PrivateCustomer(address, phone, name, age, sex , isVehicleNewsReciever);
+
+            // Check whether to register and Register costumer as a Vehicle news reciever
+            if (isVehicleNewsReciever)
+                Announcer.getInstance().RegisterVehicleNewsReciever(new Announcer.VehicleNewsHandler(costumer.PresentAnnouncement));
+
+            privateCustomers.Add(costumer);
         }
 
-        public void registerBusinessCustomer(string address, int phone, int seNumber, string contactPerson, int fax, string companyName)
+        public void registerBusinessCustomer(string address, int phone, int seNumber, string contactPerson, int fax, string companyName, bool isVehicleNewsReciever)
         {
-            businessCustomers.Add(new BusinessCustomer(address, phone, seNumber, contactPerson, fax, companyName));
-        }
+            BusinessCustomer customer = new BusinessCustomer(address, phone, seNumber, contactPerson, fax, companyName, isVehicleNewsReciever);
 
-        
+            // Check whether to register and Register costumer as a Vehicle news reciever
+            if(isVehicleNewsReciever)
+                Announcer.getInstance().RegisterVehicleNewsReciever(new Announcer.VehicleNewsHandler(customer.PresentAnnouncement));
+
+            businessCustomers.Add(customer);
+        }
 
         public List<PrivateCustomer> getPrivateCustomers()
         {

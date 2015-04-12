@@ -62,9 +62,9 @@ namespace WPF_GUI
                 string address = Private_Address.Text;
                 int phone = Int32.Parse(Private_Number.Text);
                 string name = Private_Name.Text;
+                bool isVehicleNewsReciever = checkBox_vehicleNews.IsChecked.Value;
 
-                Cardealer.getInstance().registerPrivateCustomer(address, phone, name, date, sex);
-
+                Cardealer.getInstance().registerPrivateCustomer(address, phone, name, date, sex, isVehicleNewsReciever);
             }
         }
 
@@ -77,7 +77,6 @@ namespace WPF_GUI
             if (Private_Name.Text == "")            { empty++; needs += "Name \n"; }
             if (sex == "")                          { empty++; needs += "Sex \n"; }
             if (Private_Date.SelectedDate == null)  { empty++; needs += "Date \n"; }
-
 
             if(empty > 0){
                 MessageBox.Show("You need to fill these fields: \n" + needs);
@@ -97,8 +96,9 @@ namespace WPF_GUI
                 string contactPerson    = Business_Contact.Text;
                 int fax                 = Int32.Parse(Business_Fax.Text);
                 string companyName      = Business_Name.Text;
+                bool isVehicleNewsReciever = checkBox_vehicleNews.IsChecked.Value;
 
-                Cardealer.getInstance().registerBusinessCustomer(address, phone, seNumber, contactPerson, fax, companyName);
+                Cardealer.getInstance().registerBusinessCustomer(address, phone, seNumber, contactPerson, fax, companyName, isVehicleNewsReciever);
             }
         }
 
@@ -125,6 +125,5 @@ namespace WPF_GUI
                 return true;
             }
         }
-        
     }
 }

@@ -9,7 +9,7 @@ namespace Domain
 {
     public class Truck:Vehicle
     {
-        public Truck(string model, string color, double price):base(model, color, price)
+        public Truck(string type, string model, string color, double price) : base(type, model, color, price)
         { 
         }
     }
