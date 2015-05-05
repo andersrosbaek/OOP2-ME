@@ -25,6 +25,7 @@ namespace Domain
             if(instance == null)
             {
                 instance = new Cardealer();
+                new DirectoryWatcher();
             }
 
             return instance;
