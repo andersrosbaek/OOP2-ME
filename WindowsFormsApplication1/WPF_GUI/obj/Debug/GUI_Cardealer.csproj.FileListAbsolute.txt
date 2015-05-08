@@ -56,3 +56,4 @@ C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\
 C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\GUI_Cardealer.csproj.GenerateResource.Cache
 C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.exe
 C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.pdb
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.exe.config
