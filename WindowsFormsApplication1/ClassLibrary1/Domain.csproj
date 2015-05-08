@@ -43,6 +43,7 @@
     <Compile Include="Cardealer.cs" />
     <Compile Include="Contracts\Sale.cs" />
     <Compile Include="Customers\BusinessCustomer.cs" />
+    <Compile Include="DirectoryWatcher.cs" />
     <Compile Include="Vehicles\IVehicle.cs" />
     <Compile Include="Vehicles\Truck.cs" />
     <Compile Include="Contracts\Leasing.cs" />
