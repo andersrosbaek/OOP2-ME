@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain;
 using Domain.Vehicles;
+using ClassLibrary2.ADO.Net_Entity_Framework;
 
 namespace Domain
 {
@@ -26,6 +27,11 @@ namespace Domain
             {
                 instance = new Cardealer();
                 new DirectoryWatcher();
+
+                CarDealerEntityFramework context = new CarDealerEntityFramework(); 
+                
+               
+                
             }
 
             return instance;
