@@ -16,7 +16,7 @@ namespace ClassLibrary2.ADO.Net_Entity_Framework
     public partial class CarDealerEntityFramework : DbContext
     {
         public CarDealerEntityFramework()
-            : base("name=CarDealerEntityFramework")
+            : base("CarDealerEntityFramework")
         {
         }
     

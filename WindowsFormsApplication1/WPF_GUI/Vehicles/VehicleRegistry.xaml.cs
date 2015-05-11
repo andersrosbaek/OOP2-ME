@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ClassLibrary2.ADO.Net_Entity_Framework;
 using Domain;
 
 namespace WPF_GUI
@@ -20,7 +21,7 @@ namespace WPF_GUI
     /// </summary>
     public partial class VehicleRegistry : Window
     {            
-        List<Car> cars      = Cardealer.getInstance().getCars();
+        List<Cars> cars      = Cardealer.getInstance().getCars2();
         List<Truck> trucks  = Cardealer.getInstance().getTrucks();
 
         public VehicleRegistry()

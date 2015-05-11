@@ -23,15 +23,13 @@ namespace Domain
         private static Cardealer instance;
         public static Cardealer getInstance()
         {
-            if(instance == null)
+            if (instance == null)
             {
                 instance = new Cardealer();
                 new DirectoryWatcher();
 
-                CarDealerEntityFramework context = new CarDealerEntityFramework(); 
                 
                
-                
             }
 
             return instance;
@@ -43,9 +41,19 @@ namespace Domain
 
             if(type == "car")
             {
-                Car car = new Car(type, model, color, price);
-                vehicle = car;
-                cars.Add(car);
+                Cars car = new Cars();
+                car.CarID = 4;
+                car.Color = color;
+                car.Model = model;
+                car.Price = (int) price;
+                car.Type = type;
+                //vehicle = car;
+                //cars.Add(car);
+                using (CarDealerEntityFramework context = new CarDealerEntityFramework())
+                {
+                    context.Cars.Add(car);
+                    context.SaveChanges();
+                }
             }
             else if (type == "truck")
             {
@@ -93,6 +101,14 @@ namespace Domain
         public List<Car> getCars()
         {
             return cars;
+        }
+
+        public List<Cars> getCars2()
+        {
+            using (CarDealerEntityFramework context = new CarDealerEntityFramework())
+            {
+                return context.Cars.ToList<Cars>();
+            }
         }
 
         public List<Truck> getTrucks()

@@ -12,3 +12,6 @@ C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\obj\Debug\Domain.csprojResolveAssemblyReference.cache
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.xml

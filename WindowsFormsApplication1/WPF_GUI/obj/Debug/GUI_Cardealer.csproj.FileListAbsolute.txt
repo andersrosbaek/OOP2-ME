@@ -57,3 +57,9 @@ C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\De
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\GUI_Cardealer.csproj.GenerateResource.Cache
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.exe
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.pdb
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\ClassLibrary2.dll
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.dll
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\ClassLibrary2.pdb
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.xml
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.SqlServer.xml

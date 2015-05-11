@@ -23,7 +23,7 @@ namespace WPF_GUI
         public MainScreen()
         {
             InitializeComponent();
-            FillDummyItems();
+            //FillDummyItems();
         }
 
         private static void FillDummyItems()
