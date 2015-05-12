@@ -7,17 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary2.ADO.Net_Entity_Framework
+namespace ClassLibrary2
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Cars
+    public partial class BusinessCustomers
     {
-        public int CarID { get; set; }
-        public string Type { get; set; }
-        public string Model { get; set; }
-        public string Color { get; set; }
-        public Nullable<int> Price { get; set; }
+        public int SENumber { get; set; }
+        public string Address { get; set; }
+        public int Phone { get; set; }
+        public string CompanyName { get; set; }
+        public Nullable<int> Fax { get; set; }
+        public string ContactPerson { get; set; }
+        public bool NewsReciever { get; set; }
     }
 }

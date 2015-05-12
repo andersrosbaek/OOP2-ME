@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ClassLibrary2.ADO.Net_Entity_Framework;
+using ClassLibrary2;
 using Domain;
 
 namespace WPF_GUI

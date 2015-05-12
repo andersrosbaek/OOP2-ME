@@ -7,19 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary2.ADO.Net_Entity_Framework
+namespace ClassLibrary2
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class PrivateCustomers
+    public partial class Trucks
     {
-        public int CustomerID { get; set; }
-        public string Address { get; set; }
-        public int Phone { get; set; }
-        public string Name { get; set; }
-        public System.DateTime Age { get; set; }
-        public string Sex { get; set; }
-        public bool NewsReciever { get; set; }
+        public int TruckID { get; set; }
+        public string Type { get; set; }
+        public string Model { get; set; }
+        public string Color { get; set; }
+        public int Price { get; set; }
     }
 }

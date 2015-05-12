@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary2.ADO.Net_Entity_Framework
+namespace ClassLibrary2
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class LeasingContracts
+    public partial class database_firewall_rules
     {
-        public int LeasingID { get; set; }
-        public string Customer { get; set; }
-        public string Truck { get; set; }
-        public int Price { get; set; }
-        public decimal MonthlyPrice { get; set; }
-        public System.DateTime Date { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string start_ip_address { get; set; }
+        public string end_ip_address { get; set; }
+        public System.DateTime create_date { get; set; }
+        public System.DateTime modify_date { get; set; }
     }
 }

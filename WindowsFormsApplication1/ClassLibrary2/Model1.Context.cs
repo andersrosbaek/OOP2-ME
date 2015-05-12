@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary2.ADO.Net_Entity_Framework
+namespace ClassLibrary2
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CarDealerEntityFramework : DbContext
+    public partial class AutoLotEntities : DbContext
     {
-        public CarDealerEntityFramework()
-            : base("CarDealerEntityFramework")
+        public AutoLotEntities()
+            : base("AutoLotEntities")
         {
         }
     
@@ -31,5 +31,6 @@ namespace ClassLibrary2.ADO.Net_Entity_Framework
         public virtual DbSet<SalesContracts> SalesContracts { get; set; }
         public virtual DbSet<Trucks> Trucks { get; set; }
         public virtual DbSet<LeasingContracts> LeasingContracts { get; set; }
+        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
     }
 }

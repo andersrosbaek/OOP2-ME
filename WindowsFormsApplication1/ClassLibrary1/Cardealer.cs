@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain;
 using Domain.Vehicles;
-using ClassLibrary2.ADO.Net_Entity_Framework;
+using ClassLibrary2;
 
 namespace Domain
 {
@@ -51,7 +51,7 @@ namespace Domain
                 car.Type = type;
                 //vehicle = car;
                 //cars.Add(car);
-                using (CarDealerEntityFramework context = new CarDealerEntityFramework())
+                using (AutoLotEntities context = new AutoLotEntities())
                 {
                     context.Cars.Add(car);
                     context.SaveChanges();
@@ -107,7 +107,7 @@ namespace Domain
 
         public List<Cars> getCars2()
         {
-            using (CarDealerEntityFramework context = new CarDealerEntityFramework())
+            using (AutoLotEntities context = new AutoLotEntities())
             {
                 return context.Cars.ToList<Cars>();
             }

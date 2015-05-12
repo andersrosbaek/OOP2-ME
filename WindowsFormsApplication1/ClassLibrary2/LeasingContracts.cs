@@ -7,19 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary2.ADO.Net_Entity_Framework
+namespace ClassLibrary2
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class BusinessCustomers
+    public partial class LeasingContracts
     {
-        public int SENumber { get; set; }
-        public string Address { get; set; }
-        public int Phone { get; set; }
-        public string CompanyName { get; set; }
-        public Nullable<int> Fax { get; set; }
-        public string ContactPerson { get; set; }
-        public bool NewsReciever { get; set; }
+        public int LeasingID { get; set; }
+        public string Customer { get; set; }
+        public string Truck { get; set; }
+        public int Price { get; set; }
+        public decimal MonthlyPrice { get; set; }
+        public System.DateTime Date { get; set; }
     }
 }
