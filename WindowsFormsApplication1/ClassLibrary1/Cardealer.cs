@@ -42,7 +42,9 @@ namespace Domain
             if(type == "car")
             {
                 Cars car = new Cars();
-                car.CarID = 4;
+                //car.CarID = null;
+                Console.WriteLine("CarID: "+car.CarID);
+                Console.ReadLine();
                 car.Color = color;
                 car.Model = model;
                 car.Price = (int) price;

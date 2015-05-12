@@ -13,3 +13,13 @@ C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\obj\Debug\Persistent.csprojResolveAssemblyReference.cache
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\obj\Debug\ClassLibrary2.dll
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\bin\Debug\ClassLibrary2.dll.config
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\bin\Debug\ClassLibrary2.dll
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\bin\Debug\EntityFramework.dll
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\bin\Debug\EntityFramework.xml
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\obj\Debug\Persistent.csprojResolveAssemblyReference.cache
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\obj\Debug\ClassLibrary2.dll
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\ClassLibrary2\obj\Debug\ClassLibrary2.pdb

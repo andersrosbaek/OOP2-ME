@@ -14,13 +14,6 @@
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="View available cars" Width="200px" />
 &nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="View available trucks" Width="200px" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
     
     </div>
     </form>
