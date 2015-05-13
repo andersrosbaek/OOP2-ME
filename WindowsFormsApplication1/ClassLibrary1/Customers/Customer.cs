@@ -9,19 +9,6 @@ namespace Domain
 {
     public class Customer
     {
-        public string Address { set; get; }
-        public int Phone { set; get; }
-        public string Name { set; get; }
-        public bool IsVehicleNewsReciever { set; get; }
-
-        public Customer(string address, int phone, string name, bool isVehicleNewsReciever)
-        {
-            Address = address;
-            Phone = phone;
-            Name = name;
-            IsVehicleNewsReciever = isVehicleNewsReciever;
-        }
-
         /**
          * Called if:
          * registered among listOfVehicleNewsRecievers using 
@@ -30,8 +17,7 @@ namespace Domain
          **/
         public void PresentAnnouncement(string msg)
         {
-            if(IsVehicleNewsReciever)
-                System.Diagnostics.Debug.WriteLine("Dear "+Name+", \n "+msg);
+            System.Diagnostics.Debug.WriteLine(msg);
         }
     }
 }

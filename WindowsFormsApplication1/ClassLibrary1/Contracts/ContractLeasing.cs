@@ -7,10 +7,8 @@ using Domain;
 
 namespace Domain
 {
-    public class Truck:Vehicle
+    public partial class ContractLeasing : Contract
     {
-        public Truck(string type, string model, string color, double price) : base(type, model, color, price)
-        { 
-        }
+
     }
 }

@@ -27,7 +27,6 @@ C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\
 C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\GUI_Cardealer.csproj.GenerateResource.Cache
 C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.exe
 C:\Users\Anders Bruun Rosbæk\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.pdb
-C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.exe.config
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.exe.config
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.exe
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.pdb
@@ -63,18 +62,13 @@ C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\De
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.xml
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Selech\Documents\GitHub\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.exe
-C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.pdb
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.exe.config
 C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.exe
 C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\WPF_GUI.pdb
 C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\ClassLibrary1.dll
-C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\ClassLibrary2.dll
 C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.dll
-C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\ClassLibrary1.pdb
-C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\ClassLibrary2.pdb
 C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.xml
-C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\GUI_Cardealer.csprojResolveAssemblyReference.cache
 C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\Contracts\ContractRegistry.baml
 C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\Vehicles\VehicleRegistry.baml
@@ -97,3 +91,7 @@ C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI
 C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.g.resources
 C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.Properties.Resources.resources
 C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\GUI_Cardealer.csproj.GenerateResource.Cache
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.exe
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\obj\Debug\WPF_GUI.pdb
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Anders Bruun Rosbæk\Documents\OOP2-ME\WindowsFormsApplication1\WPF_GUI\bin\Debug\EntityFramework.SqlServer.xml

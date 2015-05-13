@@ -7,19 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary2
+namespace Domain
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class BusinessCustomers
+    public partial class CustomerBusiness
     {
+        public CustomerBusiness()
+        {
+            this.ContractLeasings = new HashSet<ContractLeasing>();
+        }
+    
         public int SENumber { get; set; }
+        public string CompanyName { get; set; }
         public string Address { get; set; }
         public int Phone { get; set; }
-        public string CompanyName { get; set; }
-        public Nullable<int> Fax { get; set; }
         public string ContactPerson { get; set; }
+        public Nullable<int> Fax { get; set; }
         public bool NewsReciever { get; set; }
+    
+        public virtual ICollection<ContractLeasing> ContractLeasings { get; set; }
     }
 }

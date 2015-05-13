@@ -1,5 +1,4 @@
-﻿using Domain.Vehicles;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,9 +29,10 @@ namespace Domain
         public void RegisterVehicleNewsReciever(VehicleNewsHandler methodToCall) { listOfVehicleNewsRecievers += methodToCall; }
         public void UnRegisterVehicleNewsReciever(VehicleNewsHandler methodToCall) { listOfVehicleNewsRecievers -= methodToCall; }
 
-        public void AnnounceNewVehicle(IVehicle v)
+        public void AnnounceNewVehicle(string type, string model, string color, string price)
         {
-            listOfVehicleNewsRecievers("We are proud to bring you the news of our new " + v.Type + " model " + v.Model + " available in the color " + v.Color + " for only "+v.Price+"!. \n Best regards,\nus");
+            string message = "Dear customer! We are proud to bring you the news of our new " + type + " model " + model + " available in the color " + color + " for only " + price + "!. \n Best regards,\nus";
+            listOfVehicleNewsRecievers(message);
         }
     }
 }

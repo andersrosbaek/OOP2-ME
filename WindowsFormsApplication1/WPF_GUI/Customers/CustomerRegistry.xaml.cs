@@ -20,8 +20,8 @@ namespace WPF_GUI
     /// </summary>
     public partial class CustomerRegistry : Window
     {            
-        List<PrivateCustomer> privateCustomers = Cardealer.getInstance().getPrivateCustomers();
-        List<BusinessCustomer> businessCustomers = Cardealer.getInstance().getBusinessCustomers();
+        List<CustomerPrivate> privateCustomers = Cardealer.getInstance().getPrivateCustomers();
+        List<CustomerBusiness> businessCustomers = Cardealer.getInstance().getBusinessCustomers();
 
         public CustomerRegistry()
         {

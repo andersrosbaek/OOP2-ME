@@ -7,18 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary2
+namespace Domain
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class database_firewall_rules
+    public partial class VehicleTruck
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string start_ip_address { get; set; }
-        public string end_ip_address { get; set; }
-        public System.DateTime create_date { get; set; }
-        public System.DateTime modify_date { get; set; }
+        public VehicleTruck()
+        {
+            this.ContractLeasings = new HashSet<ContractLeasing>();
+        }
+    
+        public int VehicleTruckID { get; set; }
+        public string Type { get; set; }
+        public string Model { get; set; }
+        public string Color { get; set; }
+        public int Price { get; set; }
+    
+        public virtual ICollection<ContractLeasing> ContractLeasings { get; set; }
     }
 }

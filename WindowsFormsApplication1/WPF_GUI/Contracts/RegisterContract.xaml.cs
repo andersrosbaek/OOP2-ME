@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Domain;
 
 namespace WPF_GUI
 {
@@ -20,17 +20,17 @@ namespace WPF_GUI
     /// </summary>
     public partial class RegisterContract : Window
     {
-        List<PrivateCustomer> privateCustomers = Cardealer.getInstance().getPrivateCustomers();
-        List<BusinessCustomer> businessCustomers = Cardealer.getInstance().getBusinessCustomers();
-        List<Car> cars = Cardealer.getInstance().getCars();
-        List<Truck> trucks = Cardealer.getInstance().getTrucks();
+        List<CustomerPrivate> privateCustomers = Cardealer.getInstance().getPrivateCustomers();
+        List<CustomerBusiness> businessCustomers = Cardealer.getInstance().getBusinessCustomers();
+        List<VehicleCar> cars = Cardealer.getInstance().getCars();
+        List<VehicleTruck> trucks = Cardealer.getInstance().getTrucks();
 
         public RegisterContract()
         {
             InitializeComponent();
             fillComboBoxes();
             
-            foreach (PrivateCustomer name in privateCustomers)
+            foreach (CustomerPrivate name in privateCustomers)
             {
                 if(name != null)
                 {
@@ -39,16 +39,16 @@ namespace WPF_GUI
                 
             }
 
-            foreach (BusinessCustomer company in businessCustomers)
+            foreach (CustomerBusiness company in businessCustomers)
             {
                 if (company != null)
                 {
-                    btnCompany.Items.Add(company.Name);
+                    btnCompany.Items.Add(company.CompanyName);
                 }
 
             }
 
-            foreach (Car model in cars)
+            foreach (VehicleCar model in cars)
             {
                 if (model != null)
                 {
@@ -57,7 +57,7 @@ namespace WPF_GUI
 
             }
 
-            foreach (Truck model in trucks)
+            foreach (VehicleTruck model in trucks)
             {
                 if (model != null)
                 {
@@ -95,7 +95,7 @@ namespace WPF_GUI
             btnVehicleColor.Items.Clear();
             btnVehicleColor.Items.Add("Select a color");
             btnVehicleColor.SelectedIndex = 0;
-            foreach (Car model in cars)
+            foreach (VehicleCar model in cars)
             {
                 if (String.Equals(model.Model, btnVehicleModel.SelectedItem))
                 {
@@ -110,7 +110,7 @@ namespace WPF_GUI
             btnVehiclePrice.Items.Clear();
             btnVehiclePrice.Items.Add("Select a price");
             btnVehiclePrice.SelectedIndex = 0;
-            foreach (Car model in cars)
+            foreach (VehicleCar model in cars)
             {
                 if (String.Equals(model.Model, btnVehicleModel.SelectedItem) && String.Equals(model.Color, btnVehicleColor.SelectedItem))
                 {
@@ -135,7 +135,7 @@ namespace WPF_GUI
             btnCompanyVehicleColor.Items.Clear();
             btnCompanyVehicleColor.Items.Add("Select a color");
             btnCompanyVehicleColor.SelectedIndex = 0;
-            foreach (Truck model in trucks)
+            foreach (VehicleTruck model in trucks)
             {
                 if (String.Equals(model.Model, btnCompanyVehicleModel.SelectedItem))
                 {
@@ -150,7 +150,7 @@ namespace WPF_GUI
             btnCompanyVehiclePrice.Items.Clear();
             btnCompanyVehiclePrice.Items.Add("Select a price");
             btnCompanyVehiclePrice.SelectedIndex = 0;
-            foreach (Truck model in trucks)
+            foreach (VehicleTruck model in trucks)
             {
                 if (String.Equals(model.Model, btnCompanyVehicleModel.SelectedItem) && String.Equals(model.Color, btnCompanyVehicleColor.SelectedItem))
                 {
@@ -173,13 +173,13 @@ namespace WPF_GUI
 
         private void createSalesContract(object sender, RoutedEventArgs e)
         {
-            PrivateCustomer pc = null;
-            Car car = null;
+            CustomerPrivate pc = null;
+            VehicleCar car = null;
             if(checkSalesContractFields())
             {
                 double totalPrice = (double)lblTotalVehicleprice.Content;
 
-                foreach (PrivateCustomer privateCust in privateCustomers)
+                foreach (CustomerPrivate privateCust in privateCustomers)
                 {
                     if (privateCust.Name == (string) btnCustomer.SelectedItem)
                     {
@@ -187,7 +187,7 @@ namespace WPF_GUI
                     }
                 }
 
-                foreach (Car saleCar in cars)
+                foreach (VehicleCar saleCar in cars)
                 {
                     if (saleCar.Model == (string) btnVehicleModel.SelectedItem && saleCar.Color == (string) btnVehicleColor.SelectedItem && saleCar.Price == (double)btnVehiclePrice.SelectedItem)
                     {
@@ -224,22 +224,22 @@ namespace WPF_GUI
 
         private void createLeasingContrac(object sender, RoutedEventArgs e)
         {
-            BusinessCustomer bc = null;
-            Truck truck = null;
+            CustomerBusiness bc = null;
+            VehicleTruck truck = null;
             if (checkLeasingContractFields())
             {
                 double totalPrice = (double)lblCompanyTotalVehicleCost.Content;
                 double monthlyPrice = (double)lblCompanyMonthlyVehicleCost.Content;
 
-                foreach (BusinessCustomer companyCust in businessCustomers)
+                foreach (CustomerBusiness companyCust in businessCustomers)
                 {
-                    if (companyCust.Name == (string) btnCompany.SelectedItem)
+                    if (companyCust.CompanyName == (string) btnCompany.SelectedItem)
                     {
                         bc = companyCust;
                     }
                 }
 
-                foreach (Truck leaseTruck in trucks)
+                foreach (VehicleTruck leaseTruck in trucks)
                 {
                     if (leaseTruck.Model == (string) btnCompanyVehicleModel.SelectedItem && leaseTruck.Color == (string) btnCompanyVehicleColor.SelectedItem && leaseTruck.Price == (double)btnCompanyVehiclePrice.SelectedItem)
                     {

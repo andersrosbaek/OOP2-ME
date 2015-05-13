@@ -7,17 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary2
+namespace Domain
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Cars
+    public partial class VehicleCar
     {
-        public int CarID { get; set; }
+        public VehicleCar()
+        {
+            this.ContractSales = new HashSet<ContractSale>();
+        }
+    
+        public int VehicleCarID { get; set; }
         public string Type { get; set; }
         public string Model { get; set; }
         public string Color { get; set; }
-        public Nullable<int> Price { get; set; }
+        public int Price { get; set; }
+    
+        public virtual ICollection<ContractSale> ContractSales { get; set; }
     }
 }

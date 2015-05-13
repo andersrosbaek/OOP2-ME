@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ClassLibrary2;
 using Domain;
 
 namespace WPF_GUI
@@ -21,8 +20,8 @@ namespace WPF_GUI
     /// </summary>
     public partial class VehicleRegistry : Window
     {            
-        List<Cars> cars      = Cardealer.getInstance().getCars2();
-        List<Truck> trucks  = Cardealer.getInstance().getTrucks();
+        List<VehicleCar> cars      = Cardealer.getInstance().getCars();
+        List<VehicleTruck> trucks  = Cardealer.getInstance().getTrucks();
 
         public VehicleRegistry()
         {
@@ -37,7 +36,6 @@ namespace WPF_GUI
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
             VehicleGrid.ItemsSource = trucks;
-
         }
     }
 }

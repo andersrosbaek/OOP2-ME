@@ -153,19 +153,16 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\Domain.csproj">
       <Project>{412e05c2-ed00-4bd0-951f-906b0421ccae}</Project>
       <Name>Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ClassLibrary2\Persistent.csproj">
-      <Project>{f4040e9b-3de1-46e3-8efe-9e8104c00c17}</Project>
-      <Name>Persistent</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

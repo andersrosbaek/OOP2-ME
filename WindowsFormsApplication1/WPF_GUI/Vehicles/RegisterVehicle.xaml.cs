@@ -59,9 +59,12 @@ namespace WPF_GUI
 
             if (btnVehicleModel.SelectedIndex != 0 && btnVehicleColor.SelectedIndex != 0 && price > 0)
             {
-                Cardealer.getInstance().registerVehicle(type, model, color, price);
+                if(type == "car")
+                    Cardealer.getInstance().registerCar(type, model, color, price);
+                else
+                    Cardealer.getInstance().registerTruck(type, model, color, price);
 
-                lblStatus.Content = "Vehicle registered!";
+                lblStatus.Content = UppercaseFirst(type)+" registered!";
             }
             else
             {
@@ -72,6 +75,17 @@ namespace WPF_GUI
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             GuiUtil.checkNumerical(inputVehiclePrice);
+        }
+
+        private string UppercaseFirst(string s)
+        {
+            // Check for empty string.
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+            // Return char and concat substring.
+            return char.ToUpper(s[0]) + s.Substring(1);
         }
     }
 }

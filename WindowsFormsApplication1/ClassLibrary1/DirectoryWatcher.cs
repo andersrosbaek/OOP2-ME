@@ -53,7 +53,7 @@ namespace Domain
                     while ((input = sr.ReadLine()) != null)
                     {
                         string[] values = input.Split(';');
-                        Cardealer.getInstance().registerVehicle(values[0], values[1], values[2], double.Parse(values[3]));
+                        Cardealer.getInstance().registerCar(values[0], values[1], values[2], double.Parse(values[3]));
                     }
                 }
             }

@@ -7,19 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary2
+namespace Domain
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class PrivateCustomers
+    public partial class CustomerPrivate
     {
-        public int CustomerID { get; set; }
+        public CustomerPrivate()
+        {
+            this.ContractSales = new HashSet<ContractSale>();
+        }
+    
+        public int CustomerPrivateID { get; set; }
+        public string Name { get; set; }
         public string Address { get; set; }
         public int Phone { get; set; }
-        public string Name { get; set; }
+        public bool NewsReciever { get; set; }
         public System.DateTime Age { get; set; }
         public string Sex { get; set; }
-        public bool NewsReciever { get; set; }
+    
+        public virtual ICollection<ContractSale> ContractSales { get; set; }
     }
 }

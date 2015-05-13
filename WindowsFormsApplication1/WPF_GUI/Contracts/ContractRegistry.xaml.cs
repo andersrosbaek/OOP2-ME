@@ -20,14 +20,12 @@ namespace WPF_GUI
     /// </summary>
     public partial class ContractRegistry : Window
     {
-        List<Sale> sales = Cardealer.getInstance().getSalesContracts();
-        List<Leasing> leasing = Cardealer.getInstance().getLeasingContracts();
+        List<ContractSale> sales = Cardealer.getInstance().getSalesContracts();
+        List<ContractLeasing> leasing = Cardealer.getInstance().getLeasingContracts();
 
         public ContractRegistry()
         {
             InitializeComponent();
-
-            
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -39,7 +37,5 @@ namespace WPF_GUI
         {
             ContractGrid.ItemsSource = leasing;
         }
-
-       
     }
 }

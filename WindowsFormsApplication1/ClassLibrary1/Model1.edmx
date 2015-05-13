@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AutoLotModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ContractLeasing">
+          <Key>
+            <PropertyRef Name="LeasingID" />
+          </Key>
+          <Property Name="LeasingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MonthlyPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="SENumber" Type="int" Nullable="false" />
+          <Property Name="VehicleTruckID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContractSale">
+          <Key>
+            <PropertyRef Name="SalesID" />
+          </Key>
+          <Property Name="SalesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerPrivateID" Type="int" Nullable="false" />
+          <Property Name="VehicleCarID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CustomerBusiness">
+          <Key>
+            <PropertyRef Name="SENumber" />
+          </Key>
+          <Property Name="SENumber" Type="int" Nullable="false" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="int" Nullable="false" />
+          <Property Name="ContactPerson" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fax" Type="int" />
+          <Property Name="NewsReciever" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CustomerPrivate">
+          <Key>
+            <PropertyRef Name="CustomerPrivateID" />
+          </Key>
+          <Property Name="CustomerPrivateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="int" Nullable="false" />
+          <Property Name="NewsReciever" Type="bit" Nullable="false" />
+          <Property Name="Age" Type="datetime" Nullable="false" />
+          <Property Name="Sex" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VehicleCar">
+          <Key>
+            <PropertyRef Name="VehicleCarID" />
+          </Key>
+          <Property Name="VehicleCarID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Model" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Color" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VehicleTruck">
+          <Key>
+            <PropertyRef Name="VehicleTruckID" />
+          </Key>
+          <Property Name="VehicleTruckID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Model" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Color" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ContractLeasing_CustomerBusiness">
+          <End Role="CustomerBusiness" Type="Self.CustomerBusiness" Multiplicity="1" />
+          <End Role="ContractLeasing" Type="Self.ContractLeasing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CustomerBusiness">
+              <PropertyRef Name="SENumber" />
+            </Principal>
+            <Dependent Role="ContractLeasing">
+              <PropertyRef Name="SENumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContractLeasing_VehicleTruck">
+          <End Role="VehicleTruck" Type="Self.VehicleTruck" Multiplicity="1" />
+          <End Role="ContractLeasing" Type="Self.ContractLeasing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VehicleTruck">
+              <PropertyRef Name="VehicleTruckID" />
+            </Principal>
+            <Dependent Role="ContractLeasing">
+              <PropertyRef Name="VehicleTruckID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContractSale_CustomerPrivate">
+          <End Role="CustomerPrivate" Type="Self.CustomerPrivate" Multiplicity="1" />
+          <End Role="ContractSale" Type="Self.ContractSale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CustomerPrivate">
+              <PropertyRef Name="CustomerPrivateID" />
+            </Principal>
+            <Dependent Role="ContractSale">
+              <PropertyRef Name="CustomerPrivateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContractSale_VehicleCar">
+          <End Role="VehicleCar" Type="Self.VehicleCar" Multiplicity="1" />
+          <End Role="ContractSale" Type="Self.ContractSale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VehicleCar">
+              <PropertyRef Name="VehicleCarID" />
+            </Principal>
+            <Dependent Role="ContractSale">
+              <PropertyRef Name="VehicleCarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AutoLotModelStoreContainer">
+          <EntitySet Name="ContractLeasing" EntityType="Self.ContractLeasing" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ContractSale" EntityType="Self.ContractSale" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CustomerBusiness" EntityType="Self.CustomerBusiness" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CustomerPrivate" EntityType="Self.CustomerPrivate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VehicleCar" EntityType="Self.VehicleCar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VehicleTruck" EntityType="Self.VehicleTruck" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ContractLeasing_CustomerBusiness" Association="Self.FK_ContractLeasing_CustomerBusiness">
+            <End Role="CustomerBusiness" EntitySet="CustomerBusiness" />
+            <End Role="ContractLeasing" EntitySet="ContractLeasing" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContractLeasing_VehicleTruck" Association="Self.FK_ContractLeasing_VehicleTruck">
+            <End Role="VehicleTruck" EntitySet="VehicleTruck" />
+            <End Role="ContractLeasing" EntitySet="ContractLeasing" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContractSale_CustomerPrivate" Association="Self.FK_ContractSale_CustomerPrivate">
+            <End Role="CustomerPrivate" EntitySet="CustomerPrivate" />
+            <End Role="ContractSale" EntitySet="ContractSale" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContractSale_VehicleCar" Association="Self.FK_ContractSale_VehicleCar">
+            <End Role="VehicleCar" EntitySet="VehicleCar" />
+            <End Role="ContractSale" EntitySet="ContractSale" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AutoLotModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AutoLotEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ContractLeasings" EntityType="AutoLotModel.ContractLeasing" />
+          <EntitySet Name="ContractSales" EntityType="AutoLotModel.ContractSale" />
+          <EntitySet Name="CustomerBusinesses" EntityType="AutoLotModel.CustomerBusiness" />
+          <EntitySet Name="CustomerPrivates" EntityType="AutoLotModel.CustomerPrivate" />
+          <EntitySet Name="VehicleCars" EntityType="AutoLotModel.VehicleCar" />
+          <EntitySet Name="VehicleTrucks" EntityType="AutoLotModel.VehicleTruck" />
+          <AssociationSet Name="FK_ContractLeasing_CustomerBusiness" Association="AutoLotModel.FK_ContractLeasing_CustomerBusiness">
+            <End Role="CustomerBusiness" EntitySet="CustomerBusinesses" />
+            <End Role="ContractLeasing" EntitySet="ContractLeasings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContractLeasing_VehicleTruck" Association="AutoLotModel.FK_ContractLeasing_VehicleTruck">
+            <End Role="VehicleTruck" EntitySet="VehicleTrucks" />
+            <End Role="ContractLeasing" EntitySet="ContractLeasings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContractSale_CustomerPrivate" Association="AutoLotModel.FK_ContractSale_CustomerPrivate">
+            <End Role="CustomerPrivate" EntitySet="CustomerPrivates" />
+            <End Role="ContractSale" EntitySet="ContractSales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContractSale_VehicleCar" Association="AutoLotModel.FK_ContractSale_VehicleCar">
+            <End Role="VehicleCar" EntitySet="VehicleCars" />
+            <End Role="ContractSale" EntitySet="ContractSales" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ContractLeasing">
+          <Key>
+            <PropertyRef Name="LeasingID" />
+          </Key>
+          <Property Name="LeasingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MonthlyPrice" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="SENumber" Type="Int32" Nullable="false" />
+          <Property Name="VehicleTruckID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="CustomerBusiness" Relationship="AutoLotModel.FK_ContractLeasing_CustomerBusiness" FromRole="ContractLeasing" ToRole="CustomerBusiness" />
+          <NavigationProperty Name="VehicleTruck" Relationship="AutoLotModel.FK_ContractLeasing_VehicleTruck" FromRole="ContractLeasing" ToRole="VehicleTruck" />
+        </EntityType>
+        <EntityType Name="ContractSale">
+          <Key>
+            <PropertyRef Name="SalesID" />
+          </Key>
+          <Property Name="SalesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerPrivateID" Type="Int32" Nullable="false" />
+          <Property Name="VehicleCarID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="CustomerPrivate" Relationship="AutoLotModel.FK_ContractSale_CustomerPrivate" FromRole="ContractSale" ToRole="CustomerPrivate" />
+          <NavigationProperty Name="VehicleCar" Relationship="AutoLotModel.FK_ContractSale_VehicleCar" FromRole="ContractSale" ToRole="VehicleCar" />
+        </EntityType>
+        <EntityType Name="CustomerBusiness">
+          <Key>
+            <PropertyRef Name="SENumber" />
+          </Key>
+          <Property Name="SENumber" Type="Int32" Nullable="false" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="Int32" Nullable="false" />
+          <Property Name="ContactPerson" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="Int32" />
+          <Property Name="NewsReciever" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ContractLeasings" Relationship="AutoLotModel.FK_ContractLeasing_CustomerBusiness" FromRole="CustomerBusiness" ToRole="ContractLeasing" />
+        </EntityType>
+        <EntityType Name="CustomerPrivate">
+          <Key>
+            <PropertyRef Name="CustomerPrivateID" />
+          </Key>
+          <Property Name="CustomerPrivateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="Int32" Nullable="false" />
+          <Property Name="NewsReciever" Type="Boolean" Nullable="false" />
+          <Property Name="Age" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Sex" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ContractSales" Relationship="AutoLotModel.FK_ContractSale_CustomerPrivate" FromRole="CustomerPrivate" ToRole="ContractSale" />
+        </EntityType>
+        <EntityType Name="VehicleCar">
+          <Key>
+            <PropertyRef Name="VehicleCarID" />
+          </Key>
+          <Property Name="VehicleCarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Model" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Color" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ContractSales" Relationship="AutoLotModel.FK_ContractSale_VehicleCar" FromRole="VehicleCar" ToRole="ContractSale" />
+        </EntityType>
+        <EntityType Name="VehicleTruck">
+          <Key>
+            <PropertyRef Name="VehicleTruckID" />
+          </Key>
+          <Property Name="VehicleTruckID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Model" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Color" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ContractLeasings" Relationship="AutoLotModel.FK_ContractLeasing_VehicleTruck" FromRole="VehicleTruck" ToRole="ContractLeasing" />
+        </EntityType>
+        <Association Name="FK_ContractLeasing_CustomerBusiness">
+          <End Type="AutoLotModel.CustomerBusiness" Role="CustomerBusiness" Multiplicity="1" />
+          <End Type="AutoLotModel.ContractLeasing" Role="ContractLeasing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CustomerBusiness">
+              <PropertyRef Name="SENumber" />
+            </Principal>
+            <Dependent Role="ContractLeasing">
+              <PropertyRef Name="SENumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContractLeasing_VehicleTruck">
+          <End Type="AutoLotModel.VehicleTruck" Role="VehicleTruck" Multiplicity="1" />
+          <End Type="AutoLotModel.ContractLeasing" Role="ContractLeasing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VehicleTruck">
+              <PropertyRef Name="VehicleTruckID" />
+            </Principal>
+            <Dependent Role="ContractLeasing">
+              <PropertyRef Name="VehicleTruckID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContractSale_CustomerPrivate">
+          <End Type="AutoLotModel.CustomerPrivate" Role="CustomerPrivate" Multiplicity="1" />
+          <End Type="AutoLotModel.ContractSale" Role="ContractSale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CustomerPrivate">
+              <PropertyRef Name="CustomerPrivateID" />
+            </Principal>
+            <Dependent Role="ContractSale">
+              <PropertyRef Name="CustomerPrivateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContractSale_VehicleCar">
+          <End Type="AutoLotModel.VehicleCar" Role="VehicleCar" Multiplicity="1" />
+          <End Type="AutoLotModel.ContractSale" Role="ContractSale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VehicleCar">
+              <PropertyRef Name="VehicleCarID" />
+            </Principal>
+            <Dependent Role="ContractSale">
+              <PropertyRef Name="VehicleCarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AutoLotModelStoreContainer" CdmEntityContainer="AutoLotEntities">
+          <EntitySetMapping Name="ContractLeasings">
+            <EntityTypeMapping TypeName="AutoLotModel.ContractLeasing">
+              <MappingFragment StoreEntitySet="ContractLeasing">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="VehicleTruckID" ColumnName="VehicleTruckID" />
+                <ScalarProperty Name="SENumber" ColumnName="SENumber" />
+                <ScalarProperty Name="MonthlyPrice" ColumnName="MonthlyPrice" />
+                <ScalarProperty Name="LeasingID" ColumnName="LeasingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContractSales">
+            <EntityTypeMapping TypeName="AutoLotModel.ContractSale">
+              <MappingFragment StoreEntitySet="ContractSale">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="VehicleCarID" ColumnName="VehicleCarID" />
+                <ScalarProperty Name="CustomerPrivateID" ColumnName="CustomerPrivateID" />
+                <ScalarProperty Name="SalesID" ColumnName="SalesID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerBusinesses">
+            <EntityTypeMapping TypeName="AutoLotModel.CustomerBusiness">
+              <MappingFragment StoreEntitySet="CustomerBusiness">
+                <ScalarProperty Name="NewsReciever" ColumnName="NewsReciever" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="SENumber" ColumnName="SENumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerPrivates">
+            <EntityTypeMapping TypeName="AutoLotModel.CustomerPrivate">
+              <MappingFragment StoreEntitySet="CustomerPrivate">
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="NewsReciever" ColumnName="NewsReciever" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CustomerPrivateID" ColumnName="CustomerPrivateID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VehicleCars">
+            <EntityTypeMapping TypeName="AutoLotModel.VehicleCar">
+              <MappingFragment StoreEntitySet="VehicleCar">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="VehicleCarID" ColumnName="VehicleCarID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VehicleTrucks">
+            <EntityTypeMapping TypeName="AutoLotModel.VehicleTruck">
+              <MappingFragment StoreEntitySet="VehicleTruck">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="VehicleTruckID" ColumnName="VehicleTruckID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

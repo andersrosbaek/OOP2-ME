@@ -10,15 +10,15 @@ namespace WebApplication1
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
-        List<Car> cars = Cardealer.getInstance().getCars();
-        List<Truck> trucks = Cardealer.getInstance().getTrucks();
+        List<VehicleCar> cars = Cardealer.getInstance().getCars();
+        List<VehicleTruck> trucks = Cardealer.getInstance().getTrucks();
         public int indexInDropdown = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             ViewCarsDropdown.Items.Add("- Pick a car -");
 
-            foreach (Car c in cars)
+            foreach (VehicleCar c in cars)
             {
                 ViewCarsDropdown.Items.Add(c.Color + " " + c.Model);
             }

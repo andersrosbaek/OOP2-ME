@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary2
+namespace Domain
 {
     using System;
     using System.Data.Entity;
@@ -25,12 +25,11 @@ namespace ClassLibrary2
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<BusinessCustomers> BusinessCustomers { get; set; }
-        public virtual DbSet<Cars> Cars { get; set; }
-        public virtual DbSet<PrivateCustomers> PrivateCustomers { get; set; }
-        public virtual DbSet<SalesContracts> SalesContracts { get; set; }
-        public virtual DbSet<Trucks> Trucks { get; set; }
-        public virtual DbSet<LeasingContracts> LeasingContracts { get; set; }
-        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
+        public virtual DbSet<ContractLeasing> ContractLeasings { get; set; }
+        public virtual DbSet<ContractSale> ContractSales { get; set; }
+        public virtual DbSet<CustomerBusiness> CustomerBusinesses { get; set; }
+        public virtual DbSet<CustomerPrivate> CustomerPrivates { get; set; }
+        public virtual DbSet<VehicleCar> VehicleCars { get; set; }
+        public virtual DbSet<VehicleTruck> VehicleTrucks { get; set; }
     }
 }

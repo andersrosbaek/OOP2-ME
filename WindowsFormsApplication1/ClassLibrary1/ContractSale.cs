@@ -7,17 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary2
+namespace Domain
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Trucks
+    public partial class ContractSale
     {
-        public int TruckID { get; set; }
-        public string Type { get; set; }
-        public string Model { get; set; }
-        public string Color { get; set; }
-        public int Price { get; set; }
+        public int SalesID { get; set; }
+        public int CustomerPrivateID { get; set; }
+        public int VehicleCarID { get; set; }
+        public System.DateTime Date { get; set; }
+    
+        public virtual CustomerPrivate CustomerPrivate { get; set; }
+        public virtual VehicleCar VehicleCar { get; set; }
     }
 }

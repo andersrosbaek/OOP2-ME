@@ -20,13 +20,13 @@ namespace WebApplication1
             Cardealer.getInstance().registerPrivateCustomer("Strandalléen 2, 3790 Hasle", 22521293, "Pernille A. Paulsen", new DateTime(1993, 2, 28), "Female", false);
             Cardealer.getInstance().registerPrivateCustomer("Strandvej 51, 1271 København K", 44291733, "John O. Klausen", new DateTime(1968, 7, 8), "Male", true);
 
-            Cardealer.getInstance().registerVehicle("car", "Toyota", "blue", 200000.0);
-            Cardealer.getInstance().registerVehicle("car", "BMW", "green", 140000.0);
-            Cardealer.getInstance().registerVehicle("car", "Audi", "yellow", 125000.0);
+            Cardealer.getInstance().registerCar("car", "Toyota", "blue", 200000.0);
+            Cardealer.getInstance().registerCar("car", "BMW", "green", 140000.0);
+            Cardealer.getInstance().registerCar("car", "Audi", "yellow", 125000.0);
 
-            Cardealer.getInstance().registerVehicle("truck", "VW", "red", 450000.0);
-            Cardealer.getInstance().registerVehicle("truck", "VW", "green", 510000.0);
-            Cardealer.getInstance().registerVehicle("truck", "Mazda", "yellow", 230000.0);
+            Cardealer.getInstance().registerTruck("truck", "VW", "red", 450000.0);
+            Cardealer.getInstance().registerTruck("truck", "VW", "green", 510000.0);
+            Cardealer.getInstance().registerTruck("truck", "Mazda", "yellow", 230000.0);
         }
 
         protected void Button1_Click(object sender, EventArgs e)
