@@ -31,7 +31,7 @@ namespace Domain
 
         public void AnnounceNewVehicle(string type, string model, string color, string price)
         {
-            string message = "Dear customer! We are proud to bring you the news of our new " + type + " model " + model + " available in the color " + color + " for only " + price + "!. \n Best regards,\nus";
+            string message = "We are proud to bring you the news of our new " + type + " model " + model + " available in the color " + color + " for only " + price + "!\n Best regards,\nus";
             listOfVehicleNewsRecievers(message);
         }
     }

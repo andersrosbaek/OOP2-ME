@@ -10,19 +10,9 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        fasjfalskjfaosjfkasf </br>
-        fasjfalskjfaosjfkasf </br>
-        fasjfalskjfaosjfkasf </br>
-        fasjfalskjfaosjfkasf </br>
-        fasjfalskjfaosjfkasf </br>
-        fasjfalskjfaosjfkasf </br>
-        fasjfalskjfaosjfkasf </br>
-        fasjfalskjfaosjfkasf </br>
-        fasjfalskjfaosjfkasf </br>
-        fasjfalskjfaosjfkasf </br>
-        fasjfalskjfaosjfkasf </br>
-        fasjfalskjfaosjfkasf </br>
-        fasjfalskjfaosjfkasf </br>
+        Menu<br />
+        <br />
+        </br>
         </br></br></br></br></br>
     </div>
     </form>

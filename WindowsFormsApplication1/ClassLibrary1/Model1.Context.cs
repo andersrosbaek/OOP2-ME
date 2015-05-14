@@ -16,7 +16,7 @@ namespace Domain
     public partial class AutoLotEntities : DbContext
     {
         public AutoLotEntities()
-            : base("AutoLotEntities")
+            : base("name=AutoLotEntities")
         {
         }
     

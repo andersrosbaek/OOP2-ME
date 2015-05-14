@@ -1,23 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Domain;
-
-namespace Domain
+﻿namespace Domain.Customers
 {
-    public class Customer
+    public class Customer : ICustomer
     {
-        /**
-         * Called if:
-         * registered among listOfVehicleNewsRecievers using 
-         * RegisterVehicleNewsReciever(VehicleNewsHandler methodToCall) in Cardealer.cs.
-         * @msg Message to announce for the customer
-         **/
-        public void PresentAnnouncement(string msg)
+        public virtual void PresentAnnouncement(string msg)
         {
-            System.Diagnostics.Debug.WriteLine(msg);
+            // To be extended in sub-classes
+        }
+
+        public virtual bool CheckIfNewsReciever()
+        {
+            // To be extended in sub-classes
+            return false;
         }
     }
 }

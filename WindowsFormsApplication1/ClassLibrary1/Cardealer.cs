@@ -25,9 +25,30 @@ namespace Domain
             {
                 instance = new Cardealer();
                 new DirectoryWatcher();
+
+                // Go through existing customers in database to register them so as they
+                // can recieve news of new vehicles that are registered in the system.
+                registerExistingNewsRecievers(getInstance().getPrivateCustomers());
+                registerExistingNewsRecievers(getInstance().getBusinessCustomers());
             }
 
             return instance;
+        }
+
+        private static void registerExistingNewsRecievers<T> (List<T> customerList)
+        {
+            Type typeParameterType = typeof(T);
+
+            int length = customerList.Count;
+            for (int i = 0; i < length; i++)
+            {
+                ICustomer customer = (customerList[i] as ICustomer);
+
+                if (customer.CheckIfNewsReciever() == true)
+                {
+                    Announcer.getInstance().RegisterVehicleNewsReciever(customer.PresentAnnouncement);
+                }
+            }
         }
 
         public void registerCar(string type, string model, string color, double price)

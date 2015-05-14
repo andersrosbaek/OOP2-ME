@@ -64,8 +64,10 @@
     <Compile Include="CustomerPrivate.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Customers\BusinessCustomer.cs" />
+    <Compile Include="Customers\CustomerBusiness.cs" />
+    <Compile Include="Customers\Customer.cs" />
     <Compile Include="DirectoryWatcher.cs" />
+    <Compile Include="Customers\ICustomer.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,9 +90,8 @@
     <Compile Include="Contracts\ContractLeasing.cs" />
     <Compile Include="Contracts\Contract.cs" />
     <Compile Include="Vehicles\Vehicle.cs" />
-    <Compile Include="Customers\Customer.cs" />
     <Compile Include="Vehicles\VehicleCar.cs" />
-    <Compile Include="Customers\PrivateCustomer.cs" />
+    <Compile Include="Customers\CustomerPrivate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VehicleTruck.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -124,6 +125,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.edmx.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
