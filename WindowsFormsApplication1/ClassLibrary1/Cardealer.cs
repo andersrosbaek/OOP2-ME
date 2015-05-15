@@ -71,6 +71,18 @@ namespace Domain
             Announcer.getInstance().AnnounceNewVehicle(type, model, color, price.ToString());
         }
 
+        public void removeCar(int ID)
+        {
+            VehicleCar car;
+
+            using (AutoLotEntities context = new AutoLotEntities())
+            {
+                car = context.VehicleCars.Find(ID);
+                context.VehicleCars.Remove(car);
+                context.SaveChanges();
+            }
+        }
+
          public void registerTruck(string type, string model, string color, double price)
         {
             // Create new car with provided informations
@@ -89,6 +101,18 @@ namespace Domain
 
             Announcer.getInstance().AnnounceNewVehicle(type, model, color, price.ToString());
         }
+
+         public void removeTruck(int ID)
+         {
+             VehicleTruck car;
+
+             using (AutoLotEntities context = new AutoLotEntities())
+             {
+                 car = context.VehicleTrucks.Find(ID);
+                 context.VehicleTrucks.Remove(car);
+                 context.SaveChanges();
+             }
+         }
 
         public void registerPrivateCustomer(string address, int phone, string name, DateTime age, string sex, bool isVehicleNewsReciever)
         {

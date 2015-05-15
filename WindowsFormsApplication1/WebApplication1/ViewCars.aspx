@@ -10,23 +10,18 @@
     <form id="form1" runat="server">
     <div>
     
-        Choose from the cars<br />
-        <asp:DropDownList ID="ViewCarsDropdown" runat="server" OnSelectedIndexChanged="ViewCarsDropdown_SelectedIndexChanged">
+        Here you can see each of our available cars:<br />
+        <br />
+        <asp:GridView ID="GridView1" runat="server">
+        </asp:GridView>
+        <br />
+        If you wish to delete one of the cars, select its ID in the field below and press delete:<br />
+        <asp:DropDownList ID="DropDownList1" runat="server">
         </asp:DropDownList>
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Delete" />
         <br />
         <br />
-        Model: <br />
-        <asp:Label ID="ModelLabel" runat="server" Text="---"></asp:Label>
-        <br />
-        <br />
-        Color:
-        <br />
-        <asp:Label ID="ColorLabel" runat="server" Text="---"></asp:Label>
-        <br />
-        <br />
-        Price:
-        <br />
-        <asp:Label ID="PriceLabel" runat="server" Text="---"></asp:Label>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Back to Main" />
     
     </div>
     </form>

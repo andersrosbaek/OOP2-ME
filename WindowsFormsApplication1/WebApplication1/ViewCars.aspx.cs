@@ -11,35 +11,30 @@ namespace WebApplication1
     public partial class WebForm2 : System.Web.UI.Page
     {
         List<VehicleCar> cars = Cardealer.getInstance().getCars();
-        List<VehicleTruck> trucks = Cardealer.getInstance().getTrucks();
-        public int indexInDropdown = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            ViewCarsDropdown.Items.Add("- Pick a car -");
+            DropDownList1.Items.Add("");
 
-            foreach (VehicleCar c in cars)
-            {
-                ViewCarsDropdown.Items.Add(c.Color + " " + c.Model);
+            foreach (VehicleCar c in cars) {
+                DropDownList1.Items.Add(c.VehicleCarID + "");
             }
 
-            if (indexInDropdown > 0) 
-            {
-                ChangeItems();
-            }
+            GridView1.DataSource = cars;
+            GridView1.DataBind();
         }
 
-        protected void ViewCarsDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            indexInDropdown = ViewCarsDropdown.SelectedIndex;
+            Response.Redirect("MainMenu.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Cardealer.getInstance().removeCar(int.Parse(DropDownList1.SelectedValue));
 
             Response.Redirect("ViewCars.aspx");
         }
 
-        private void ChangeItems() {
-            ModelLabel.Text = cars[indexInDropdown - 1].Model;
-            ColorLabel.Text = cars[indexInDropdown - 1].Color;
-            PriceLabel.Text = cars[indexInDropdown - 1].Price + "";
-        }
     }
 }

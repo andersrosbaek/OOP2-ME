@@ -10,10 +10,19 @@
     <form id="form1" runat="server">
     <div style="height: 193px">
     
+        <asp:Label ID="Label1" runat="server" Font-Size="24pt" Text="Welcome to the WebApplication of CarDealer"></asp:Label>
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="View available cars" Width="200px" />
-&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="View available trucks" Width="200px" />
+        <br />
+        Here you can view our catalogue of cars!
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="View and edit cars" Width="200px" />
+        <br />
+    
+        <br />
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="View and edit trucks" Width="200px" />
+    
+        <br />
     
     </div>
     </form>
